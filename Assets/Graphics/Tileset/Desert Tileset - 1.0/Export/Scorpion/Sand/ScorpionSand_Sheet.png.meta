@@ -1,0 +1,1313 @@
+fileFormatVersion: 2
+guid: 24ee956b58e72b54fb899987e99c99ed
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2884475934432629996
+    second: ScorpionSand_Sheet_0
+  - first:
+      213: -4544629158348697556
+    second: ScorpionSand_Sheet_1
+  - first:
+      213: -5477364488673513934
+    second: ScorpionSand_Sheet_2
+  - first:
+      213: -5859109145072792015
+    second: ScorpionSand_Sheet_3
+  - first:
+      213: 3353226881685198353
+    second: ScorpionSand_Sheet_4
+  - first:
+      213: 2853577759421257856
+    second: ScorpionSand_Sheet_5
+  - first:
+      213: 2820259272456496760
+    second: ScorpionSand_Sheet_6
+  - first:
+      213: -9096992200868078636
+    second: ScorpionSand_Sheet_7
+  - first:
+      213: 5377291289841985187
+    second: ScorpionSand_Sheet_8
+  - first:
+      213: -7256388372063092895
+    second: ScorpionSand_Sheet_9
+  - first:
+      213: 4404207936303541628
+    second: ScorpionSand_Sheet_10
+  - first:
+      213: -2645303293956956328
+    second: ScorpionSand_Sheet_11
+  - first:
+      213: -2540573818708237973
+    second: ScorpionSand_Sheet_12
+  - first:
+      213: -6206066740095349413
+    second: ScorpionSand_Sheet_13
+  - first:
+      213: 5953706068351741560
+    second: ScorpionSand_Sheet_14
+  - first:
+      213: 1326677215238722401
+    second: ScorpionSand_Sheet_15
+  - first:
+      213: 5374138983532319956
+    second: ScorpionSand_Sheet_16
+  - first:
+      213: -3813607782309770515
+    second: ScorpionSand_Sheet_17
+  - first:
+      213: -7817369994879235947
+    second: ScorpionSand_Sheet_18
+  - first:
+      213: -6271487307928664639
+    second: ScorpionSand_Sheet_19
+  - first:
+      213: 6260691846404942046
+    second: ScorpionSand_Sheet_20
+  - first:
+      213: -1810104584574729376
+    second: ScorpionSand_Sheet_21
+  - first:
+      213: -4893241419720636842
+    second: ScorpionSand_Sheet_22
+  - first:
+      213: 3371421728621429915
+    second: ScorpionSand_Sheet_23
+  - first:
+      213: 1951700657580700609
+    second: ScorpionSand_Sheet_24
+  - first:
+      213: 7853572490987269501
+    second: ScorpionSand_Sheet_25
+  - first:
+      213: 2550821771880112125
+    second: ScorpionSand_Sheet_26
+  - first:
+      213: -4016374550759375825
+    second: ScorpionSand_Sheet_27
+  - first:
+      213: -6345696473263004691
+    second: ScorpionSand_Sheet_28
+  - first:
+      213: 4125607708374565102
+    second: ScorpionSand_Sheet_29
+  - first:
+      213: 6929959302484390026
+    second: ScorpionSand_Sheet_30
+  - first:
+      213: -1842903578603920346
+    second: ScorpionSand_Sheet_31
+  - first:
+      213: -950688142307873729
+    second: ScorpionSand_Sheet_32
+  - first:
+      213: -2571144022009412116
+    second: ScorpionSand_Sheet_33
+  - first:
+      213: -6379523237485586437
+    second: ScorpionSand_Sheet_34
+  - first:
+      213: 6676429920253323681
+    second: ScorpionSand_Sheet_35
+  - first:
+      213: -5883670777524322257
+    second: ScorpionSand_Sheet_36
+  - first:
+      213: 2326101208745398882
+    second: ScorpionSand_Sheet_37
+  - first:
+      213: -4494987198345107660
+    second: ScorpionSand_Sheet_38
+  - first:
+      213: 6506165960778520090
+    second: ScorpionSand_Sheet_39
+  - first:
+      213: -5544840720433010885
+    second: ScorpionSand_Sheet_40
+  - first:
+      213: 3013764831520905248
+    second: ScorpionSand_Sheet_41
+  - first:
+      213: -9007607952629453311
+    second: ScorpionSand_Sheet_42
+  - first:
+      213: -7124769933995133729
+    second: ScorpionSand_Sheet_43
+  - first:
+      213: 8141736160058594174
+    second: ScorpionSand_Sheet_44
+  - first:
+      213: 6322312161487613894
+    second: ScorpionSand_Sheet_45
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 349
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41beaf49b6848f7d0800000000000000
+      internalID: -2884475934432629996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 349
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c205eb4ebdb3ee0c0800000000000000
+      internalID: -4544629158348697556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 349
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23ea643940e7cf3b0800000000000000
+      internalID: -5477364488673513934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 349
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13e81b3864340bea0800000000000000
+      internalID: -5859109145072792015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 349
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 116132e251e098e20800000000000000
+      internalID: 3353226881685198353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 349
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08852417ad1f99720800000000000000
+      internalID: 2853577759421257856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 349
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 876654dadd2932720800000000000000
+      internalID: 2820259272456496760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 349
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4db52ce8acdf0c180800000000000000
+      internalID: -9096992200868078636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 301
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a665d020f9ff9a40800000000000000
+      internalID: 5377291289841985187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 301
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16f77eab8312c4b90800000000000000
+      internalID: -7256388372063092895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 303
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7d245898c3ee1d30800000000000000
+      internalID: 4404207936303541628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 303
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85f56886baef94bd0800000000000000
+      internalID: -2645303293956956328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 301
+        width: 35
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b61ec3a82911ebcd0800000000000000
+      internalID: -2540573818708237973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 301
+        width: 40
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5d00485e2f9fd9a0800000000000000
+      internalID: -6206066740095349413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 301
+        width: 29
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87e61350020df9250800000000000000
+      internalID: 5953706068351741560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 301
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16398e1f5ed496210800000000000000
+      internalID: 1326677215238722401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 253
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d4d50f9ee6c49a40800000000000000
+      internalID: 5374138983532319956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 253
+        width: 21
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deac2c66de7531bc0800000000000000
+      internalID: -3813607782309770515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 253
+        width: 35
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5980d69686f138390800000000000000
+      internalID: -7817369994879235947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 253
+        width: 40
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c58a8d658337f8a0800000000000000
+      internalID: -6271487307928664639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 257
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed8a621501272e650800000000000000
+      internalID: 6260691846404942046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 256
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0630e1e787731e6e0800000000000000
+      internalID: -1810104584574729376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 253
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 656c251bad6b71cb0800000000000000
+      internalID: -4893241419720636842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 253
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b94838a1332b9ce20800000000000000
+      internalID: 3371421728621429915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 205
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c37ef25865d51b10800000000000000
+      internalID: 1951700657580700609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 205
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7d631f029e7dfc60800000000000000
+      internalID: 7853572490987269501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 205
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dff1f3ef2e6566320800000000000000
+      internalID: 2550821771880112125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 205
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2c711130a8f248c0800000000000000
+      internalID: -4016374550759375825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 205
+        width: 34
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de3a5b2bdae8fe7a0800000000000000
+      internalID: -6345696473263004691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 205
+        width: 39
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee087443a5a114930800000000000000
+      internalID: 4125607708374565102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 157
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a80fe74e4492c2060800000000000000
+      internalID: 6929959302484390026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 157
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 624640a95f0bc66e0800000000000000
+      internalID: -1842903578603920346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 160
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3c2099eb2a7ec2f0800000000000000
+      internalID: -950688142307873729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 112
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce582cd6226715cd0800000000000000
+      internalID: -2571144022009412116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 109
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf752596a616777a0800000000000000
+      internalID: -6379523237485586437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 109
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a92d74a3a177ac50800000000000000
+      internalID: 6676429920253323681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 61
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f200152d990095ea0800000000000000
+      internalID: -5883670777524322257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 61
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26250e2a9b8f74020800000000000000
+      internalID: 2326101208745398882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 61
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43726b465f89e91c0800000000000000
+      internalID: -4494987198345107660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 61
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1611fd587b8a4a50800000000000000
+      internalID: 6506165960778520090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 13
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b37287a1eb4cc03b0800000000000000
+      internalID: -5544840720433010885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 13
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0285e5b852b03d920800000000000000
+      internalID: 3013764831520905248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 13
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10ea98b9a4c8ef280800000000000000
+      internalID: -9007607952629453311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 13
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd436d16e7bbf1d90800000000000000
+      internalID: -7124769933995133729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 13
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e73de3b96e14df070800000000000000
+      internalID: 8141736160058594174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionSand_Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 13
+        width: 27
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cfe990f96d5db750800000000000000
+      internalID: 6322312161487613894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ScorpionSand_Sheet_0: -2884475934432629996
+      ScorpionSand_Sheet_1: -4544629158348697556
+      ScorpionSand_Sheet_10: 4404207936303541628
+      ScorpionSand_Sheet_11: -2645303293956956328
+      ScorpionSand_Sheet_12: -2540573818708237973
+      ScorpionSand_Sheet_13: -6206066740095349413
+      ScorpionSand_Sheet_14: 5953706068351741560
+      ScorpionSand_Sheet_15: 1326677215238722401
+      ScorpionSand_Sheet_16: 5374138983532319956
+      ScorpionSand_Sheet_17: -3813607782309770515
+      ScorpionSand_Sheet_18: -7817369994879235947
+      ScorpionSand_Sheet_19: -6271487307928664639
+      ScorpionSand_Sheet_2: -5477364488673513934
+      ScorpionSand_Sheet_20: 6260691846404942046
+      ScorpionSand_Sheet_21: -1810104584574729376
+      ScorpionSand_Sheet_22: -4893241419720636842
+      ScorpionSand_Sheet_23: 3371421728621429915
+      ScorpionSand_Sheet_24: 1951700657580700609
+      ScorpionSand_Sheet_25: 7853572490987269501
+      ScorpionSand_Sheet_26: 2550821771880112125
+      ScorpionSand_Sheet_27: -4016374550759375825
+      ScorpionSand_Sheet_28: -6345696473263004691
+      ScorpionSand_Sheet_29: 4125607708374565102
+      ScorpionSand_Sheet_3: -5859109145072792015
+      ScorpionSand_Sheet_30: 6929959302484390026
+      ScorpionSand_Sheet_31: -1842903578603920346
+      ScorpionSand_Sheet_32: -950688142307873729
+      ScorpionSand_Sheet_33: -2571144022009412116
+      ScorpionSand_Sheet_34: -6379523237485586437
+      ScorpionSand_Sheet_35: 6676429920253323681
+      ScorpionSand_Sheet_36: -5883670777524322257
+      ScorpionSand_Sheet_37: 2326101208745398882
+      ScorpionSand_Sheet_38: -4494987198345107660
+      ScorpionSand_Sheet_39: 6506165960778520090
+      ScorpionSand_Sheet_4: 3353226881685198353
+      ScorpionSand_Sheet_40: -5544840720433010885
+      ScorpionSand_Sheet_41: 3013764831520905248
+      ScorpionSand_Sheet_42: -9007607952629453311
+      ScorpionSand_Sheet_43: -7124769933995133729
+      ScorpionSand_Sheet_44: 8141736160058594174
+      ScorpionSand_Sheet_45: 6322312161487613894
+      ScorpionSand_Sheet_5: 2853577759421257856
+      ScorpionSand_Sheet_6: 2820259272456496760
+      ScorpionSand_Sheet_7: -9096992200868078636
+      ScorpionSand_Sheet_8: 5377291289841985187
+      ScorpionSand_Sheet_9: -7256388372063092895
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

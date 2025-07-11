@@ -1,0 +1,1313 @@
+fileFormatVersion: 2
+guid: 8ed3d83583758aa4d9e8277bc588680e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -340825247775707120
+    second: ScorpionMetal_Sheet_0
+  - first:
+      213: -4177534463892137947
+    second: ScorpionMetal_Sheet_1
+  - first:
+      213: 5875383295816516836
+    second: ScorpionMetal_Sheet_2
+  - first:
+      213: -3886031775188238524
+    second: ScorpionMetal_Sheet_3
+  - first:
+      213: -4964416114342661330
+    second: ScorpionMetal_Sheet_4
+  - first:
+      213: -6968773396675628031
+    second: ScorpionMetal_Sheet_5
+  - first:
+      213: 716132910369078007
+    second: ScorpionMetal_Sheet_6
+  - first:
+      213: 1218057270394345331
+    second: ScorpionMetal_Sheet_7
+  - first:
+      213: -1549487408853666915
+    second: ScorpionMetal_Sheet_8
+  - first:
+      213: 6052683071653993023
+    second: ScorpionMetal_Sheet_9
+  - first:
+      213: -6096109758357224948
+    second: ScorpionMetal_Sheet_10
+  - first:
+      213: 1719262103388502725
+    second: ScorpionMetal_Sheet_11
+  - first:
+      213: 5379983884847161708
+    second: ScorpionMetal_Sheet_12
+  - first:
+      213: 5104290235262213057
+    second: ScorpionMetal_Sheet_13
+  - first:
+      213: -7582107598587648950
+    second: ScorpionMetal_Sheet_14
+  - first:
+      213: 2358800654909729591
+    second: ScorpionMetal_Sheet_15
+  - first:
+      213: 4158683491582930374
+    second: ScorpionMetal_Sheet_16
+  - first:
+      213: -1928745497216759613
+    second: ScorpionMetal_Sheet_17
+  - first:
+      213: 1010466850884573939
+    second: ScorpionMetal_Sheet_18
+  - first:
+      213: -8850018268482836671
+    second: ScorpionMetal_Sheet_19
+  - first:
+      213: 1773744298021230103
+    second: ScorpionMetal_Sheet_20
+  - first:
+      213: -2582534829061250727
+    second: ScorpionMetal_Sheet_21
+  - first:
+      213: -4225545123847730954
+    second: ScorpionMetal_Sheet_22
+  - first:
+      213: 294372614825258514
+    second: ScorpionMetal_Sheet_23
+  - first:
+      213: 7412685180304392044
+    second: ScorpionMetal_Sheet_24
+  - first:
+      213: 2237140600315403254
+    second: ScorpionMetal_Sheet_25
+  - first:
+      213: -574479559465806228
+    second: ScorpionMetal_Sheet_26
+  - first:
+      213: 5328901278570051154
+    second: ScorpionMetal_Sheet_27
+  - first:
+      213: -4691158992901299697
+    second: ScorpionMetal_Sheet_28
+  - first:
+      213: 7359220825546590551
+    second: ScorpionMetal_Sheet_29
+  - first:
+      213: 7143131996258888942
+    second: ScorpionMetal_Sheet_30
+  - first:
+      213: 5421648661207723781
+    second: ScorpionMetal_Sheet_31
+  - first:
+      213: -1957409978693927287
+    second: ScorpionMetal_Sheet_32
+  - first:
+      213: 8889774983368088518
+    second: ScorpionMetal_Sheet_33
+  - first:
+      213: 3279396081484256614
+    second: ScorpionMetal_Sheet_34
+  - first:
+      213: -6839278672051295362
+    second: ScorpionMetal_Sheet_35
+  - first:
+      213: 8657220743983291857
+    second: ScorpionMetal_Sheet_36
+  - first:
+      213: 3444153124972707986
+    second: ScorpionMetal_Sheet_37
+  - first:
+      213: -4029091462195989479
+    second: ScorpionMetal_Sheet_38
+  - first:
+      213: 503049252713899666
+    second: ScorpionMetal_Sheet_39
+  - first:
+      213: 6419042232683729199
+    second: ScorpionMetal_Sheet_40
+  - first:
+      213: -5135899961302375692
+    second: ScorpionMetal_Sheet_41
+  - first:
+      213: -2761700382641015180
+    second: ScorpionMetal_Sheet_42
+  - first:
+      213: -875185511836517051
+    second: ScorpionMetal_Sheet_43
+  - first:
+      213: -4201663039597712952
+    second: ScorpionMetal_Sheet_44
+  - first:
+      213: 7975099077776112564
+    second: ScorpionMetal_Sheet_45
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 349
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01038df2e35254bf0800000000000000
+      internalID: -340825247775707120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 349
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 528d1c2e98a6606c0800000000000000
+      internalID: -4177534463892137947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 349
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e4486a7afd898150800000000000000
+      internalID: 5875383295816516836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 349
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44f360680ba021ac0800000000000000
+      internalID: -3886031775188238524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 349
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e23716bb8d9da1bb0800000000000000
+      internalID: -4964416114342661330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 349
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 104f4f29481f94f90800000000000000
+      internalID: -6968773396675628031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 349
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7faf386761730f900800000000000000
+      internalID: 716132910369078007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 349
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 377dfe542a867e010800000000000000
+      internalID: 1218057270394345331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 301
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d933653496d1f7ae0800000000000000
+      internalID: -1549487408853666915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 301
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3ad4f76f237ff350800000000000000
+      internalID: 6052683071653993023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 303
+        width: 28
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c02435d2974466ba0800000000000000
+      internalID: -6096109758357224948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 303
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ca334426cb0cd710800000000000000
+      internalID: 1719262103388502725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 301
+        width: 35
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6124a1c6da89aa40800000000000000
+      internalID: 5379983884847161708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 301
+        width: 40
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cb9c4fdce416d640800000000000000
+      internalID: 5104290235262213057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 301
+        width: 29
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a44a4619f41f6c690800000000000000
+      internalID: -7582107598587648950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 301
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73b6adbb2b42cb020800000000000000
+      internalID: 2358800654909729591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 253
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cde4191a9c96b930800000000000000
+      internalID: 4158683491582930374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 253
+        width: 21
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c8c2407038bb35e0800000000000000
+      internalID: -1928745497216759613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 253
+        width: 35
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fa58484f36e50e00800000000000000
+      internalID: 1010466850884573939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 253
+        width: 40
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 147ec53364b6e2580800000000000000
+      internalID: -8850018268482836671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 257
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7161ee59a0b9d9810800000000000000
+      internalID: 1773744298021230103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 256
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 951eabd714ef82cd0800000000000000
+      internalID: -2582534829061250727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 253
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f80ca60919db55c0800000000000000
+      internalID: -4225545123847730954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 253
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21e23426552d51400800000000000000
+      internalID: 294372614825258514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 205
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6f78dbb5e52fd660800000000000000
+      internalID: 7412685180304392044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 205
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fb576ae58beb0f10800000000000000
+      internalID: 2237140600315403254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 205
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c66515762e90708f0800000000000000
+      internalID: -574479559465806228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 205
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 256fa48aa7f04f940800000000000000
+      internalID: 5328901278570051154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 205
+        width: 34
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f022d3330c7a5eeb0800000000000000
+      internalID: -4691158992901299697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 205
+        width: 39
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7598c5a9954312660800000000000000
+      internalID: 7359220825546590551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 157
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eececb464b0812360800000000000000
+      internalID: 7143131996258888942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 157
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50f22447bb09d3b40800000000000000
+      internalID: 5421648661207723781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 160
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98eb424cef1e5d4e0800000000000000
+      internalID: -1957409978693927287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 112
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cb1fc05f33de5b70800000000000000
+      internalID: 8889774983368088518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 109
+        width: 29
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6655da27c51c28d20800000000000000
+      internalID: 3279396081484256614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 109
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7b2a78a8400611a0800000000000000
+      internalID: -6839278672051295362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 61
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dd54431660a42870800000000000000
+      internalID: 8657220743983291857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 61
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 290cc0ee4071ccf20800000000000000
+      internalID: 3444153124972707986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 61
+        width: 31
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 914bf3489aac518c0800000000000000
+      internalID: -4029091462195989479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 61
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 296a98c41a03bf600800000000000000
+      internalID: 503049252713899666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 13
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f21185da6e4051950800000000000000
+      internalID: 6419042232683729199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 13
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f221a4423e99b8b0800000000000000
+      internalID: -5135899961302375692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 13
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4763f9452287ca9d0800000000000000
+      internalID: -2761700382641015180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 13
+        width: 27
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54d7a66f967bad3f0800000000000000
+      internalID: -875185511836517051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 13
+        width: 27
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c9e3e21ab1b0b5c0800000000000000
+      internalID: -4201663039597712952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ScorpionMetal_Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 13
+        width: 27
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bbf36b7b5e3dae60800000000000000
+      internalID: 7975099077776112564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ScorpionMetal_Sheet_0: -340825247775707120
+      ScorpionMetal_Sheet_1: -4177534463892137947
+      ScorpionMetal_Sheet_10: -6096109758357224948
+      ScorpionMetal_Sheet_11: 1719262103388502725
+      ScorpionMetal_Sheet_12: 5379983884847161708
+      ScorpionMetal_Sheet_13: 5104290235262213057
+      ScorpionMetal_Sheet_14: -7582107598587648950
+      ScorpionMetal_Sheet_15: 2358800654909729591
+      ScorpionMetal_Sheet_16: 4158683491582930374
+      ScorpionMetal_Sheet_17: -1928745497216759613
+      ScorpionMetal_Sheet_18: 1010466850884573939
+      ScorpionMetal_Sheet_19: -8850018268482836671
+      ScorpionMetal_Sheet_2: 5875383295816516836
+      ScorpionMetal_Sheet_20: 1773744298021230103
+      ScorpionMetal_Sheet_21: -2582534829061250727
+      ScorpionMetal_Sheet_22: -4225545123847730954
+      ScorpionMetal_Sheet_23: 294372614825258514
+      ScorpionMetal_Sheet_24: 7412685180304392044
+      ScorpionMetal_Sheet_25: 2237140600315403254
+      ScorpionMetal_Sheet_26: -574479559465806228
+      ScorpionMetal_Sheet_27: 5328901278570051154
+      ScorpionMetal_Sheet_28: -4691158992901299697
+      ScorpionMetal_Sheet_29: 7359220825546590551
+      ScorpionMetal_Sheet_3: -3886031775188238524
+      ScorpionMetal_Sheet_30: 7143131996258888942
+      ScorpionMetal_Sheet_31: 5421648661207723781
+      ScorpionMetal_Sheet_32: -1957409978693927287
+      ScorpionMetal_Sheet_33: 8889774983368088518
+      ScorpionMetal_Sheet_34: 3279396081484256614
+      ScorpionMetal_Sheet_35: -6839278672051295362
+      ScorpionMetal_Sheet_36: 8657220743983291857
+      ScorpionMetal_Sheet_37: 3444153124972707986
+      ScorpionMetal_Sheet_38: -4029091462195989479
+      ScorpionMetal_Sheet_39: 503049252713899666
+      ScorpionMetal_Sheet_4: -4964416114342661330
+      ScorpionMetal_Sheet_40: 6419042232683729199
+      ScorpionMetal_Sheet_41: -5135899961302375692
+      ScorpionMetal_Sheet_42: -2761700382641015180
+      ScorpionMetal_Sheet_43: -875185511836517051
+      ScorpionMetal_Sheet_44: -4201663039597712952
+      ScorpionMetal_Sheet_45: 7975099077776112564
+      ScorpionMetal_Sheet_5: -6968773396675628031
+      ScorpionMetal_Sheet_6: 716132910369078007
+      ScorpionMetal_Sheet_7: 1218057270394345331
+      ScorpionMetal_Sheet_8: -1549487408853666915
+      ScorpionMetal_Sheet_9: 6052683071653993023
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
