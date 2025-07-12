@@ -8,42 +8,42 @@ public class Player : MonoBehaviour, PlayerControls.IPlayerActions
     public float jumpForce = 10f;
     public float dashSpeed = 15f;
     public float dashDuration = 0.2f;
-    
+
     [Header("Ground Check")]
     public Transform groundCheck;
     public float groundCheckRadius = 0.2f;
     public LayerMask groundLayerMask;
-    
+
     private Rigidbody2D rb;
     private PlayerControls playerControls;
     private Vector2 moveInput;
     private bool isGrounded;
     private bool isDashing;
     private float dashTimer;
-    
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         playerControls = new PlayerControls();
         playerControls.Player.SetCallbacks(this);
     }
-    
+
     void OnEnable()
     {
         playerControls.Enable();
     }
-    
+
     void OnDisable()
     {
         playerControls.Disable();
     }
-    
+
     void Update()
     {
         CheckGrounded();
         HandleDash();
     }
-    
+
     void FixedUpdate()
     {
         if (!isDashing)
@@ -51,17 +51,17 @@ public class Player : MonoBehaviour, PlayerControls.IPlayerActions
             Move();
         }
     }
-    
+
     void CheckGrounded()
     {
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayerMask);
     }
-    
+
     void Move()
     {
         rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocity.y);
     }
-    
+
     void HandleDash()
     {
         if (isDashing)
@@ -74,13 +74,13 @@ public class Player : MonoBehaviour, PlayerControls.IPlayerActions
             }
         }
     }
-    
+
     // Input System Callbacks
     public void OnMove(InputAction.CallbackContext context)
     {
         moveInput = context.ReadValue<Vector2>();
     }
-    
+
     public void OnJump(InputAction.CallbackContext context)
     {
         if (context.performed && isGrounded)
@@ -88,7 +88,7 @@ public class Player : MonoBehaviour, PlayerControls.IPlayerActions
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
         }
     }
-    
+
     public void OnDash(InputAction.CallbackContext context)
     {
         if (context.performed && !isDashing)
@@ -99,7 +99,7 @@ public class Player : MonoBehaviour, PlayerControls.IPlayerActions
             rb.linearVelocity = dashDirection.normalized * dashSpeed;
         }
     }
-    
+
     void OnDrawGizmosSelected()
     {
         if (groundCheck != null)
@@ -107,5 +107,44 @@ public class Player : MonoBehaviour, PlayerControls.IPlayerActions
             Gizmos.color = isGrounded ? Color.green : Color.red;
             Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
         }
+    }
+
+
+    public void ZeroVelocity()
+    {
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+        }
+    }
+    
+    public void ClearInputs()
+    {
+        // Clear any input-related variables
+        // Based on your existing code structure:
+        if (playerControls != null)
+        {
+            // Reset input values if needed
+        }
+    }
+    
+    public void SetSpawnPosition(Vector2 position)
+    {
+        transform.position = position;
+        ZeroVelocity();
+        // Reset any movement states
+        /*
+        if (stateMachine != null && idleState != null)
+        {
+            stateMachine.ChangeState(idleState);
+        }
+        */
+    }
+    
+    public void OnRoomTransition()
+    {
+        // Called when transitioning between rooms
+        ZeroVelocity();
+        ClearInputs();
     }
 }
