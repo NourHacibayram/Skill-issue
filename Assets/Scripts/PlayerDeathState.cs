@@ -1,4 +1,4 @@
-using System.Collections;
+/* using System.Collections;
 using UnityEngine;
 
 public class PlayerDeathState : PlayerState
@@ -220,4 +220,4 @@ public class PlayerDeathState : PlayerState
         // Fallback position
         return new Vector3(0, 0, 0);
     }
-}
+} */

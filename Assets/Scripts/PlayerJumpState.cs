@@ -1,4 +1,4 @@
-// filepath: c:\Users\yazan\Desktop\Work\Caelum\Assets\Scripts\Player\PlayerJumpState.cs
+/* // filepath: c:\Users\yazan\Desktop\Work\Caelum\Assets\Scripts\Player\PlayerJumpState.cs
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -36,4 +36,4 @@ public class PlayerJumpState : PlayerState
             stateMachine.ChangeState(player.airState);
         }
     }
-}
+} */

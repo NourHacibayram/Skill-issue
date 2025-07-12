@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -30,7 +30,8 @@ public class PlayerAirState : PlayerState
                 stateMachine.ChangeState(player.wallSlide);
                 return;
             }
-        }        if (player.isGrounded())
+        }
+        if (player.isGrounded())
         {
             stateMachine.ChangeState(player.idleState);
             return;
@@ -56,3 +57,4 @@ public class PlayerAirState : PlayerState
         base.Exit();
     }
 }
+*/
