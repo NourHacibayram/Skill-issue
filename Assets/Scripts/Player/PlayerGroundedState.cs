@@ -11,21 +11,20 @@ public class PlayerGroundedState : PlayerState
     public override void Enter()
     {
         base.Enter();
-       
+
+        player.jumpState.ResetJumps();
     }
 
     public override void Update()
     {
         base.Update();
 
-        player.CheckForDashInput();
-
-        if (!player.isGrounded())
+        if(!player.isGrounded())
         {
             stateMachine.ChangeState(player.airState);
         }
 
-        if (player.GetJumpPressed() && player.isGrounded())
+        if(player.GetJumpPressed() && player.isGrounded())
         {
             stateMachine.ChangeState(player.jumpState);
         }

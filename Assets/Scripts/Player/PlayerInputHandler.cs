@@ -1,4 +1,4 @@
- using UnityEngine;
+using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerInputHandler : MonoBehaviour
@@ -12,17 +12,36 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void Awake()
     {
-        playerControls = new PlayerControls();
+        try
+        {
+            playerControls = new PlayerControls();
+            Debug.Log("PlayerControls initialized successfully");
+        }
+        catch (System.Exception e)
+        {
+            Debug.LogError($"Failed to initialize PlayerControls: {e.Message}");
+            Debug.LogError("Make sure you have created the PlayerControls Input Actions asset!");
+        }
     }
 
     private void OnEnable()
     {
-        EnableInputs();
+        if (playerControls != null)
+        {
+            EnableInputs();
+        }
+        else
+        {
+            Debug.LogError("PlayerControls is null in OnEnable! Cannot enable inputs.");
+        }
     }
 
     private void OnDisable()
     {
-        DisableInputs();
+        if (playerControls != null)
+        {
+            DisableInputs();
+        }
     }
 
     private void Update()
@@ -42,31 +61,73 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void EnableInputs()
     {
+        if (playerControls?.Player == null)
+        {
+            Debug.LogError("PlayerControls.Player is null! Cannot enable inputs.");
+            return;
+        }
+
         var actions = playerControls.Player;
         actions.Enable();
 
-        actions.Move.performed += OnMovePerformed;
-        actions.Move.canceled += OnMoveCanceled;
+        // Check if actions exist before subscribing
+        if (actions.Move != null)
+        {
+            actions.Move.performed += OnMovePerformed;
+            actions.Move.canceled += OnMoveCanceled;
+        }
+        else
+        {
+            Debug.LogError("Move action not found in PlayerControls!");
+        }
 
-        actions.Jump.performed += OnJumpPerformed;
-        actions.Jump.canceled += OnJumpCanceled;
+        if (actions.Jump != null)
+        {
+            actions.Jump.performed += OnJumpPerformed;
+            actions.Jump.canceled += OnJumpCanceled;
+        }
+        else
+        {
+            Debug.LogError("Jump action not found in PlayerControls!");
+        }
 
-        actions.Dash.performed += OnDashPerformed;
-        actions.Dash.canceled += OnDashCanceled;
+        if (actions.Dash != null)
+        {
+            actions.Dash.performed += OnDashPerformed;
+            actions.Dash.canceled += OnDashCanceled;
+        }
+        else
+        {
+            Debug.LogError("Dash action not found in PlayerControls!");
+        }
     }
 
     private void DisableInputs()
     {
+        if (playerControls?.Player == null)
+        {
+            return;
+        }
+
         var actions = playerControls.Player;
 
-        actions.Move.performed -= OnMovePerformed;
-        actions.Move.canceled -= OnMoveCanceled;
+        if (actions.Move != null)
+        {
+            actions.Move.performed -= OnMovePerformed;
+            actions.Move.canceled -= OnMoveCanceled;
+        }
 
-        actions.Jump.performed -= OnJumpPerformed;
-        actions.Jump.canceled -= OnJumpCanceled;
+        if (actions.Jump != null)
+        {
+            actions.Jump.performed -= OnJumpPerformed;
+            actions.Jump.canceled -= OnJumpCanceled;
+        }
 
-        actions.Dash.performed -= OnDashPerformed;
-        actions.Dash.canceled -= OnDashCanceled;
+        if (actions.Dash != null)
+        {
+            actions.Dash.performed -= OnDashPerformed;
+            actions.Dash.canceled -= OnDashCanceled;
+        }
 
         actions.Disable();
     }
@@ -98,4 +159,4 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void OnDashPerformed(InputAction.CallbackContext context) => DashPressed = true;
     private void OnDashCanceled(InputAction.CallbackContext context) => DashPressed = false;
-} 
+}
