@@ -1,5 +1,10 @@
 fileFormatVersion: 2
-guid: ebdbe5ed6410e354eaa864c17c819af2
+<<<<<<<< Updated upstream:Assets/Scenes/Levels/Level_1.unity.meta
+guid: 0657c61eb7e641f4b8e75f5d409ae239
+========
+guid: c2026fe29f7f5854a8579d615d2089eb
+folderAsset: yes
+>>>>>>>> Stashed changes:Assets/Graphics/Player.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
