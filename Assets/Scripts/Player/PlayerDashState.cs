@@ -1,4 +1,4 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 // using System.Numerics;
 using Unity.VisualScripting;
@@ -33,7 +33,7 @@ public class PlayerDashState : PlayerState
 
         if (totalDistance > player.disntaceBetweenImages)
         {
-            PlayerAfterImagePool.instance.GetFromPool();
+            // PlayerAfterImagePool.instance.GetFromPool();
             player.lastImageXpos = player.transform.position.x;
             player.lastImageYpos = player.transform.position.y;
         }
@@ -56,4 +56,3 @@ public class PlayerDashState : PlayerState
             stateMachine.ChangeState(player.idleState);
     }
 }
-*/

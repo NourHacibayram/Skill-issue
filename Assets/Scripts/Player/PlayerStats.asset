@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60a7d82c86ab825438b7f9eb5a7ef06c, type: 3}
+  m_Name: PlayerStats
+  m_EditorClassIdentifier: 
+  PlayerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  SnapInput: 1
+  VerticalDeadZoneThreshold: 0.3
+  HorizontalDeadZoneThreshold: 0.1
+  MaxSpeed: 6
+  Acceleration: 50
+  GroundDeceleration: 40
+  AirDeceleration: 15
+  GroundingForce: -1.5
+  GrounderDistance: 0.05
+  JumpPower: 8
+  MaxFallSpeed: 16
+  FallAcceleration: 5
+  JumpEndEarlyGravityModifier: 1.2
+  CoyoteTime: 0.15
+  JumpBuffer: 0.2
+  WallSlideSpeed: 1.4
+  WallJumpForceX: 8
+  WallJumpForceY: 12

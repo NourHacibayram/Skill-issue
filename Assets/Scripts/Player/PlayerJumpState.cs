@@ -1,4 +1,4 @@
-/* // filepath: c:\Users\yazan\Desktop\Work\Caelum\Assets\Scripts\Player\PlayerJumpState.cs
+// filepath: c:\Users\yazan\Desktop\Work\Caelum\Assets\Scripts\Player\PlayerJumpState.cs
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,7 +15,7 @@ public class PlayerJumpState : PlayerState
     {
         base.Enter();
         // Let the custom physics handle the jump velocity instead
-        // player.rb.linearVelocity = new Vector2(player.rb.linearVelocity.x, player.jumpForce);
+        player.rb.linearVelocity = new Vector2(player.rb.linearVelocity.x, player.jumpForce);
     }
 
     public override void Exit()
@@ -36,4 +36,4 @@ public class PlayerJumpState : PlayerState
             stateMachine.ChangeState(player.airState);
         }
     }
-} */
+}

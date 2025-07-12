@@ -1,4 +1,4 @@
-/* using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -61,4 +61,4 @@ public class PlayerWallSlideState : PlayerState
         
         player.SetVelocity(0, -slideSpeed);
     }
-} */
+}

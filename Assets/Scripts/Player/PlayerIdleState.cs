@@ -1,4 +1,4 @@
-/* using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -38,4 +38,4 @@ public class PlayerIdleState : PlayerGroundedState
             player.SetVelocity(0, player.rb.linearVelocity.y);
         }
     }
-} */
+}
