@@ -47,11 +47,14 @@ TagManager:
   - name: Background
     uniqueID: 591200679
     locked: 0
-  - name: Object
-    uniqueID: 2048698187
+  - name: Traps
+    uniqueID: 3534707349
     locked: 0
   - name: Ground
     uniqueID: 908645897
+    locked: 0
+  - name: Object
+    uniqueID: 2048698187
     locked: 0
   - name: Player
     uniqueID: 3575359999
