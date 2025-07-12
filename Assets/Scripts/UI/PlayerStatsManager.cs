@@ -148,7 +148,7 @@ public class PlayerStatsManager : MonoBehaviour
         if (remainingPointsText != null)
         {
             int remaining = totalAvailablePoints - currentUsedPoints;
-            remainingPointsText.text = $"Points: {remaining}/{totalAvailablePoints}";
+            remainingPointsText.text = $"{remaining}/{totalAvailablePoints}";
         }
     }
 

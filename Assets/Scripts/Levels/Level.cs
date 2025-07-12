@@ -16,6 +16,14 @@ public class Level : MonoBehaviour
     
     private void Start()
     {
+        // Use coroutine to ensure all components are initialized
+        StartCoroutine(SetupLevelDelayed());
+    }
+    
+    private System.Collections.IEnumerator SetupLevelDelayed()
+    {
+        // Wait one frame to ensure all Awake methods have been called
+        yield return null;
         SetupLevel();
     }
     
@@ -28,7 +36,20 @@ public class Level : MonoBehaviour
             if (player != null)
             {
                 player.transform.position = playerSpawnPoint.position;
+                
+                // Try to zero velocity, but handle if rb isn't ready yet
                 player.ZeroVelocity();
+                
+                // Alternative: directly access Rigidbody2D as fallback
+                if (player.rb == null)
+                {
+                    Rigidbody2D playerRb = player.GetComponent<Rigidbody2D>();
+                    if (playerRb != null)
+                    {
+                        playerRb.linearVelocity = Vector2.zero;
+                        Debug.Log("Used fallback method to zero player velocity");
+                    }
+                }
             }
         }
         

@@ -167,7 +167,14 @@ public class Player : MonoBehaviour
     #region Velocity
     public void ZeroVelocity()
     {
-        rb.linearVelocity = new Vector2(0, 0);
+        if (rb != null)
+        {
+            rb.linearVelocity = new Vector2(0, 0);
+        }
+        else
+        {
+            Debug.LogWarning("Cannot zero velocity: Rigidbody2D is null. Component may not be initialized yet.");
+        }
     }
 
     public void SetVelocity(float _xVelocity, float _yVelocity)
