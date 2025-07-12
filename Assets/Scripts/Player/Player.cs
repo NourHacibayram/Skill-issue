@@ -81,8 +81,14 @@ public class Player : MonoBehaviour
 
     public virtual void Update()
     {
+
         stateMachine.currentState.Update();
+        anim.SetFloat("yVelocity", rb.linearVelocity.y);
+    
+    // Safety check for stuck states
+   
     }
+    
 
     #region Collision
 

@@ -139,7 +139,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2.67
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -149,7 +149,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &1689668138039165014
 MonoBehaviour:
@@ -163,9 +163,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 75999fe6b21f02a41be055c349651633, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 3491184894429941093}
-  _stats: {fileID: 11400000, guid: 0ded16defa25d474da22fcf3fd92f6ff, type: 2}
-  _frameVelocity: {x: 0, y: 0}
   grounded: 0
   wallCheck: {fileID: 617833391147031811}
   wallCheckDistance: 0.26
@@ -173,21 +170,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   groundCheck: {fileID: 3057237633053237833}
-  moveSpeed: 5
-  jumpForce: 7
-  hasUsedDoubleJump: 0
+  moveSpeed: 6.5
+  jumpForce: 12
+  maxJumps: 2
+  doubleJumpForce: 5
   dashSpeed: 15
   dashDuration: 0.2
-  lastImageXpos: 0
-  lastImageYpos: 0
-  canDash: 1
-  maxDashes: 1
-  currentDashes: 0
-  disntaceBetweenImages: 0
-  dashParticle: {fileID: 0}
-  jumpParticle: {fileID: 0}
-  wallJumpParticle: {fileID: 0}
-  slideParticle: {fileID: 0}
+  facingRight: 1
 --- !u!95 &6468998951490053217
 Animator:
   serializedVersion: 7
@@ -220,7 +209,7 @@ CapsuleCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ea6e28a65edfa9d45a8cde9350fecf80, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

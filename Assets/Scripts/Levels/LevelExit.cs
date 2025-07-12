@@ -40,19 +40,27 @@ public class LevelExit : MonoBehaviour
         if (requiresPuzzleSolved && !IsPuzzleSolved()) return false;
         return true;
     }
-    
     private void ExitLevel()
+{
+    // Complete current level
+    Level currentLevel = FindFirstObjectByType<Level>();
+    if (currentLevel != null)
     {
-        // Complete current level
-        Level currentLevel = FindFirstObjectByType<Level>();
-        if (currentLevel != null)
-        {
-            currentLevel.CompleteLevel();
-        }
-        
+        currentLevel.CompleteLevel();
+    }
+    
+    // Check if this is the final level
+    if (nextLevelNumber > GameManager.Instance.totalLevels || nextLevelNumber <= 0)
+    {
+        // This is the final level - trigger game completion
+        GameManager.Instance.OnGameCompleted();
+    }
+    else
+    {
         // Load next level
         GameManager.Instance.LoadLevel(nextLevelNumber);
     }
+}
     
     private void UpdateExitAvailability()
     {
