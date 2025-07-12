@@ -15,7 +15,6 @@ public class PlayerInputHandler : MonoBehaviour
         try
         {
             playerControls = new PlayerControls();
-            Debug.Log("PlayerControls initialized successfully");
         }
         catch (System.Exception e)
         {

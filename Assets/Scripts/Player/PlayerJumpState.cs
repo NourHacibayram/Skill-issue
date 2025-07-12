@@ -33,7 +33,10 @@ public class PlayerJumpState : PlayerState
     {
         base.Update();
 
+
         player.SetVelocity(player.moveSpeed * player.GetMoveInput().x, player.rb.linearVelocity.y);
+        if(player.IsWallDetected())
+            stateMachine.ChangeState(player.wallSlideState);
 
         if (player.rb.linearVelocity.y < 0 && !player.isGrounded())
         {
@@ -44,6 +47,12 @@ public class PlayerJumpState : PlayerState
         {
             stateMachine.ChangeState(player.doubleJumpState);
         }
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+        player.anim.SetBool("Jump", false); // Ensure jump animation stops
     }
 
     public void ResetJumps()

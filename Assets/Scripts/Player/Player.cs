@@ -102,16 +102,13 @@ public class Player : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.Raycast(wallCheck.position, Vector2.right * facingDirection, wallCheckDistance, whatIsGround);
 
+        // Optional debug to help troubleshoot
         if (hit.collider != null)
         {
-            // Skip if it's a one-way platform
-            if (hit.collider.CompareTag("OneWay") || hit.collider.GetComponent<PlatformEffector2D>() != null)
-                return false;
-
-            return true;
+            Debug.Log($"Wall detected: {hit.collider.name} at distance {hit.distance}");
         }
 
-        return false;
+        return hit.collider != null;
     }
     public void OnDrawGizmos()
     {

@@ -15,9 +15,7 @@ public class PlayerDoubleJumpState : PlayerState
 
         if (player.jumpState.CanDoubleJump())
         {
-            Debug.Log("Double Jumping!");
             player.rb.linearVelocity = new Vector2(player.rb.linearVelocity.x, player.doubleJumpForce);
-            player.anim.SetBool("DoubleJump", true);
             player.jumpState.UseJump(); // Reduce jump count
         }
     }

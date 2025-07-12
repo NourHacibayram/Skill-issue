@@ -17,6 +17,13 @@ public class PlayerAirState : PlayerState
     {
         base.Update();
 
+        // Check for double jump input when in air
+        if (player.GetJumpPressed() && player.jumpState.CanDoubleJump())
+        {
+            stateMachine.ChangeState(player.doubleJumpState);
+            return;
+        }
+
         if(player.IsWallDetected())
             stateMachine.ChangeState(player.wallSlideState);
 
