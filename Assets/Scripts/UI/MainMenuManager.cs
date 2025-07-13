@@ -8,6 +8,9 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private UnityEngine.UI.Button settingsButton;
     [SerializeField] private UnityEngine.UI.Button quitButton;
     
+    [Header("Scene Management")]
+    [SerializeField] private string cutsceneSceneName = "Scenes/Intro"; // Your Intro scene
+    [SerializeField] private string firstLevelName = "Scenes/Levels/Level_01"; // Your first level
     
     [Header("Audio")]
     [SerializeField] private AudioSource audioSource;
@@ -21,9 +24,12 @@ public class MainMenuManager : MonoBehaviour
             audioSource = GetComponent<AudioSource>();
             
         // Add button listeners
-        playButton.onClick.AddListener(PlayGame);
-        settingsButton.onClick.AddListener(OpenSettings);
-        quitButton.onClick.AddListener(QuitGame);
+        if (playButton != null)
+            playButton.onClick.AddListener(PlayGame);
+        if (settingsButton != null)
+            settingsButton.onClick.AddListener(OpenSettings);
+        if (quitButton != null)
+            quitButton.onClick.AddListener(QuitGame);
     }
     
     private void PlayMenuSound()
@@ -37,8 +43,19 @@ public class MainMenuManager : MonoBehaviour
     public void PlayGame()
     {
         PlayMenuSound();
-        Debug.Log("Starting game...");
-        SceneManager.LoadScene(1);
+        Debug.Log("Starting game... Loading intro cutscene");
+        
+        // Load your Intro scene (index 1)
+        SceneManager.LoadScene("Scenes/Intro");
+    }
+    
+    public void PlayGameSkipIntro()
+    {
+        PlayMenuSound();
+        Debug.Log("Starting game... Skipping intro, going to Level 1");
+        
+        // Skip intro and go directly to Level_01 (index 2)
+        SceneManager.LoadScene("Scenes/Levels/Level_01");
     }
     
     public void OpenSettings()
@@ -52,13 +69,27 @@ public class MainMenuManager : MonoBehaviour
     {
         PlayMenuSound();
         Debug.Log("Quitting game...");
+        
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #else
         Application.Quit();
+        #endif
     }
     
-    // Add this new method here
+    // Utility method for loading any level by name
     public void LoadLevel(string levelName)
     {
+        PlayMenuSound();
+        Debug.Log($"Loading level: {levelName}");
         SceneManager.LoadScene(levelName);
-        // The SkillSelectionManager will automatically show when the scene loads
+    }
+    
+    // Load specific level by index (for testing)
+    public void LoadLevelByIndex(int levelIndex)
+    {
+        PlayMenuSound();
+        Debug.Log($"Loading level index: {levelIndex}");
+        SceneManager.LoadScene(levelIndex);
     }
 }
