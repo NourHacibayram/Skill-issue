@@ -8,19 +8,25 @@ public class PlayerDoubleJumpState : PlayerState
         : base(_player, _stateMachine, _animBoolName)
     {
     }
-
     public override void Enter()
     {
         base.Enter();
 
+        // CHECK IF PLAYER HAS DOUBLE JUMP SKILL
+        if (!PlayerSkills.HasDoubleJump())
+        {
+            // If no double jump skill, go back to falling
+            stateMachine.ChangeState(player.airState);
+            return;
+        }
+
         if (player.jumpState.CanDoubleJump())
         {
             player.rb.linearVelocity = new Vector2(player.rb.linearVelocity.x, player.doubleJumpForce);
-            player.PlayJumpSound(); // Add this line
-            player.jumpState.UseJump(); // Reduce jump count
+            player.PlayJumpSound();
+            player.jumpState.UseJump();
         }
     }
-
     public override void Exit()
     {
         base.Exit();
@@ -44,7 +50,7 @@ public class PlayerDoubleJumpState : PlayerState
         if (stateMachine.currentState == this)
         {
             player.anim.SetBool("Jump", false);
-            player.anim.Play("PlayerIdle", 0); 
+            player.anim.Play("PlayerIdle", 0);
         }
     }
 }

@@ -124,6 +124,24 @@ public class Player : MonoBehaviour
     }
     #endregion
 
+    #region Skills
+    public bool HasSkill(SkillType skillType)
+    {
+        // Use the static PlayerSkills class instead
+        switch (skillType)
+        {
+            case SkillType.Dash:
+                return PlayerSkills.HasDash();
+            case SkillType.WallClimb:
+                return PlayerSkills.HasWallClimb();
+            case SkillType.DoubleJump:
+                return PlayerSkills.HasDoubleJump();
+            default:
+                return false;
+        }
+    }
+    #endregion
+
 
     #region Collision
 
@@ -207,7 +225,7 @@ public class Player : MonoBehaviour
             Debug.LogWarning("InputHandler is null in Player.GetWallClimbHeld()");
             return false;
         }
-        
+
         // Use the proper held input from the Input System
         return inputHandler.WallClimbHeld;
     }
@@ -237,7 +255,7 @@ public class Player : MonoBehaviour
         rb.linearVelocity = new Vector2(_xVelocity, _yVelocity);
         FlipController(_xVelocity);
     }
-    
+
     public void SetDashDirection(float direction)
     {
         dashDirection = direction;

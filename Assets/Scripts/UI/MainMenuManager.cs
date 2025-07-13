@@ -54,4 +54,11 @@ public class MainMenuManager : MonoBehaviour
         Debug.Log("Quitting game...");
         Application.Quit();
     }
+    
+    // Add this new method here
+    public void LoadLevel(string levelName)
+    {
+        SceneManager.LoadScene(levelName);
+        // The SkillSelectionManager will automatically show when the scene loads
+    }
 }

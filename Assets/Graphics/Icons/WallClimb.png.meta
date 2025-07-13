@@ -1,19 +1,10 @@
 fileFormatVersion: 2
-guid: c38ec2717bb7a854e98a7efff8c4dc6e
+guid: 7b42466e10be1a1489d15332096cad0b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 130103568362708286
-    second: fb1077_0
-  - first:
-      213: -3242274090332442561
-    second: fb1077_1
-  - first:
-      213: 5426248851795791504
-    second: fb1077_2
-  - first:
-      213: -1110080018566439422
-    second: fb1077_3
+      213: 3948324395833988871
+    second: WallClimb_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -60,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -84,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -105,61 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fb1077_0
+      name: WallClimb_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 15
-        width: 17
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e3d154091883ec100800000000000000
-      internalID: 130103568362708286
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fb1077_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 3
-        width: 13
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f303845a4e02103d0800000000000000
-      internalID: -3242274090332442561
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fb1077_2
-      rect:
-        serializedVersion: 2
-        x: 15
         y: 0
-        width: 17
-        height: 17
+        width: 1024
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,30 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 09ec82ac498ed4b40800000000000000
-      internalID: 5426248851795791504
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: fb1077_3
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 17
-        width: 14
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 20e9615ca143890f0800000000000000
-      internalID: -1110080018566439422
+      spriteID: 70791bf6e144bc630800000000000000
+      internalID: 3948324395833988871
       vertices: []
       indices: 
       edges: []
@@ -210,10 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      fb1077_0: 130103568362708286
-      fb1077_1: -3242274090332442561
-      fb1077_2: 5426248851795791504
-      fb1077_3: -1110080018566439422
+      WallClimb_0: 3948324395833988871
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

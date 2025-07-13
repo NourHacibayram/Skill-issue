@@ -7,11 +7,28 @@ public class Skill : MonoBehaviour
     [SerializeField] protected float cooldown;
     protected float cooldownTimer;
     protected Player player;
-    
+
 
     protected virtual void Start()
     {
-        player = PlayerManager.instance.player;
+        // Find player safely
+        player = GetComponent<Player>();
+
+        // If not found on same GameObject, try finding in scene
+        if (player == null)
+        {
+            player = FindFirstObjectByType<Player>();
+        }
+
+        // Check if player was found
+        if (player == null)
+        {
+            Debug.LogError($"Player not found for skill: {GetType().Name}");
+            return;
+        }
+
+        // Initialize skill after player is found
+        InitializeSkill();
     }
 
 
@@ -22,7 +39,7 @@ public class Skill : MonoBehaviour
 
     public virtual bool CanUseSkill()
     {
-        if(cooldownTimer <= 0)
+        if (cooldownTimer <= 0)
         {
             UseSkill();
             cooldownTimer = cooldown;
@@ -36,5 +53,9 @@ public class Skill : MonoBehaviour
     public virtual void UseSkill()
     {
         Debug.Log("Skill used");
+    }
+    protected virtual void InitializeSkill()
+    {
+        // Override this in child classes
     }
 }

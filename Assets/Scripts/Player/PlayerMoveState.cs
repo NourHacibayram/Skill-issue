@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerMoveState : PlayerGroundedState
 {
     public PlayerMoveState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
-  {
-  }
+    {
+    }
 
     public override void Enter()
     {
@@ -17,15 +17,15 @@ public class PlayerMoveState : PlayerGroundedState
     {
         base.Update();
 
-        // Check for dash input
-        if (player.GetDashPressed() && !player.isBusy)
+        // Check for dash input - ONLY if dash is selected skill
+        if (player.GetDashPressed() && !player.isBusy && PlayerSkills.HasDash())
         {
             // Set dash direction based on movement
             if (xInput != 0)
                 player.SetDashDirection(Mathf.Sign(xInput));
             else
                 player.SetDashDirection(player.facingDirection);
-                
+
             stateMachine.ChangeState(player.dashState);
             return;
         }

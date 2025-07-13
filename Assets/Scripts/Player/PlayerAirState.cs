@@ -24,15 +24,15 @@ public class PlayerAirState : PlayerState
             return;
         }
 
-        // Check for dash input (air dash)
-        if (player.GetDashPressed() && !player.isBusy)
+        // Check for dash input (air dash) - ONLY if dash is selected skill
+        if (player.GetDashPressed() && !player.isBusy && PlayerSkills.HasDash())
         {
             // Set dash direction
             if (xInput != 0)
                 player.SetDashDirection(Mathf.Sign(xInput));
             else
                 player.SetDashDirection(player.facingDirection);
-                
+
             stateMachine.ChangeState(player.dashState);
             return;
         }
@@ -44,7 +44,7 @@ public class PlayerAirState : PlayerState
             return;
         }
 
-        if(player.IsWallDetected() && !player.GetWallClimbPressed())
+        if (player.IsWallDetected() && !player.GetWallClimbPressed())
             stateMachine.ChangeState(player.wallSlideState);
 
         if (player.isGrounded())
