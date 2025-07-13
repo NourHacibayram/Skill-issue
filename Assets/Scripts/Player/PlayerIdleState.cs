@@ -28,6 +28,19 @@ public class PlayerIdleState : PlayerGroundedState
         if(xInput == player.facingDirection && player.IsWallDetected())
             return;
 
+        // Check for dash input
+        if (player.GetDashPressed() && !player.isBusy)
+        {
+            // Set dash direction
+            if (xInput != 0)
+                player.SetDashDirection(Mathf.Sign(xInput));
+            else
+                player.SetDashDirection(player.facingDirection);
+                
+            stateMachine.ChangeState(player.dashState);
+            return;
+        }
+
         if (xInput != 0 && !player.isBusy)
         {
             stateMachine.ChangeState(player.moveState);

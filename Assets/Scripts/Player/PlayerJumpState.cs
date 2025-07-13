@@ -33,8 +33,21 @@ public class PlayerJumpState : PlayerState
     {
         base.Update();
 
+        // Check for dash input (jump dash)
+        if (player.GetDashPressed() && !player.isBusy)
+        {
+            // Set dash direction
+            if (player.GetMoveInput().x != 0)
+                player.SetDashDirection(Mathf.Sign(player.GetMoveInput().x));
+            else
+                player.SetDashDirection(player.facingDirection);
+                
+            stateMachine.ChangeState(player.dashState);
+            return;
+        }
 
         player.SetVelocity(player.moveSpeed * player.GetMoveInput().x, player.rb.linearVelocity.y);
+        
         if(player.IsWallDetected())
             stateMachine.ChangeState(player.wallSlideState);
 

@@ -23,7 +23,7 @@ public class PlayerDoubleJumpState : PlayerState
     public override void Exit()
     {
         base.Exit();
-        player.anim.SetBool("DoubleJump", false); // Ensure animation stops
+        player.anim.SetBool("Jump", false); // Ensure animation stops
     }
 
     public override void Update()
@@ -42,7 +42,7 @@ public class PlayerDoubleJumpState : PlayerState
     {
         if (stateMachine.currentState == this) 
         {
-            player.anim.SetBool("DoubleJump", false);
+            player.anim.SetBool("Jump", false);
             player.anim.Play("PlayerIdle", 0); 
         }
     }

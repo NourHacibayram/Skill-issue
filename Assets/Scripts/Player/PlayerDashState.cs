@@ -1,58 +1,54 @@
-// using System.Collections;
-// using System.Collections.Generic;
-// // using System.Numerics;
-// using Unity.VisualScripting;
-// using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using System.Numerics;
+using Unity.VisualScripting;
+using UnityEngine;
 
-// public class PlayerDashState : PlayerState
-// {
-//     public PlayerDashState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
-//     {
-//     }
+public class PlayerDashState : PlayerState
+{
+    public PlayerDashState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
+    {
+    }
 
-//     public override void Enter()
-//     {
-//         base.Enter();
-//         stateTimer = player.dashDuration;
-//     }
+    public override void Enter()
+    {
+        base.Enter();
 
-//     public override void Exit()
-//     {
-//         base.Exit();
-//         player.SetVelocity(0, rb.linearVelocity.y);
-//     }
+        stateTimer = player.dashDuration;
+    }
 
-//     public override void Update()
-//     {
-//         base.Update();
+    public override void Exit()
+    {
+        base.Exit();
 
-//         // Spawn AfterImage at proper intervals based on distance (both X and Y)
-//         float distanceX = Mathf.Abs(player.lastImageXpos - player.transform.position.x);
-//         float distanceY = Mathf.Abs(player.lastImageYpos - player.transform.position.y);
-//         float totalDistance = Mathf.Sqrt(distanceX * distanceX + distanceY * distanceY);
+        player.SetVelocity(0, rb.linearVelocity.y);
+    }
 
-//         if (totalDistance > player.disntaceBetweenImages)
-//         {
-//             // PlayerAfterImagePool.instance.GetFromPool();
-//             player.lastImageXpos = player.transform.position.x;
-//             player.lastImageYpos = player.transform.position.y;
-//         }
+    public override void Update()
+    {
+        base.Update();
 
-//         // Use both horizontal and vertical dash directions
-//         UnityEngine.Vector2 dashVelocity = new UnityEngine.Vector2(
-//             player.dashSpeed * player.dashDirection,
-//             player.dashSpeed * player.dashDirectionY
-//         );
+        // Continue dashing
+        player.SetVelocity(player.dashSpeed * player.dashDirection, 0);
 
-//         // Normalize diagonal dashes so they don't go faster than straight dashes
-//         if (dashVelocity.magnitude > player.dashSpeed)
-//         {
-//             dashVelocity = dashVelocity.normalized * player.dashSpeed;
-//         }
-
-//         player.SetVelocity(dashVelocity.x, dashVelocity.y);
-
-//         if (stateTimer <= 0)
-//             stateMachine.ChangeState(player.idleState);
-//     }
-// }
+        // Check for state transitions after dash
+        if(stateTimer <= 0)
+        {
+            // Determine next state based on conditions
+            if (player.isGrounded())
+            {
+                if (player.GetMoveInput().x != 0)
+                    stateMachine.ChangeState(player.moveState);
+                else
+                    stateMachine.ChangeState(player.idleState);
+            }
+            else
+            {
+                if (player.IsWallDetected())
+                    stateMachine.ChangeState(player.wallSlideState);
+                else
+                    stateMachine.ChangeState(player.airState);
+            }
+        }
+    }
+}

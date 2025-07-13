@@ -11,10 +11,11 @@ public class SkillManager : MonoBehaviour
 
     private void Awake()
     {
-        if(instance != null)
+        if (instance != null)
         {
             Destroy(instance.gameObject);
-        }else
+        }
+        else
         {
             instance = this;
         }

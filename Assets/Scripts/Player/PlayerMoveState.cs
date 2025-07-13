@@ -17,6 +17,19 @@ public class PlayerMoveState : PlayerGroundedState
     {
         base.Update();
 
+        // Check for dash input
+        if (player.GetDashPressed() && !player.isBusy)
+        {
+            // Set dash direction based on movement
+            if (xInput != 0)
+                player.SetDashDirection(Mathf.Sign(xInput));
+            else
+                player.SetDashDirection(player.facingDirection);
+                
+            stateMachine.ChangeState(player.dashState);
+            return;
+        }
+
         player.SetVelocity(player.moveSpeed * xInput, player.rb.linearVelocity.y);
 
         if (xInput == 0 || player.IsWallDetected())

@@ -24,6 +24,19 @@ public class PlayerAirState : PlayerState
             return;
         }
 
+        // Check for dash input (air dash)
+        if (player.GetDashPressed() && !player.isBusy)
+        {
+            // Set dash direction
+            if (xInput != 0)
+                player.SetDashDirection(Mathf.Sign(xInput));
+            else
+                player.SetDashDirection(player.facingDirection);
+                
+            stateMachine.ChangeState(player.dashState);
+            return;
+        }
+
         if(player.IsWallDetected())
             stateMachine.ChangeState(player.wallSlideState);
 

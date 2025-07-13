@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
     public PlayerMoveState moveState { get; private set; }
     public PlayerJumpState jumpState { get; private set; }
     public PlayerAirState airState { get; private set; }
-    // public PlayerDashState dashState { get; private set; }
+    public PlayerDashState dashState { get; private set; }
     public PlayerDoubleJumpState doubleJumpState { get; private set; }
     public PlayerWallSlideState wallSlideState { get; set; }
     public PlayerWallJumpState wallJumpState { get; private set; }  
@@ -66,10 +66,10 @@ public class Player : MonoBehaviour
         moveState = new PlayerMoveState(this, stateMachine, "Move");
         jumpState = new PlayerJumpState(this, stateMachine, "Jump");
         airState = new PlayerAirState(this, stateMachine, "Jump");
-        // dashState = new PlayerDashState(this, stateMachine, "Dash");
-        doubleJumpState = new PlayerDoubleJumpState(this, stateMachine, "DoubleJump");
+        dashState = new PlayerDashState(this, stateMachine, "Dash");
+        doubleJumpState = new PlayerDoubleJumpState(this, stateMachine, "Jump");
         wallSlideState = new PlayerWallSlideState(this, stateMachine, "WallSlide");
-        wallJumpState = new PlayerWallJumpState(this, stateMachine, "WallJump");
+        wallJumpState = new PlayerWallJumpState(this, stateMachine, "Jump");
     }
 
     public virtual void Start()
@@ -147,7 +147,7 @@ public class Player : MonoBehaviour
             Debug.LogWarning("InputHandler is null in Player.GetDashPressed()");
             return false;
         }
-        return inputHandler.DashPressed;
+        return inputHandler.SkillPressed;
     }
     #endregion
 
@@ -181,6 +181,11 @@ public class Player : MonoBehaviour
     {
         rb.linearVelocity = new Vector2(_xVelocity, _yVelocity);
         FlipController(_xVelocity);
+    }
+    
+    public void SetDashDirection(float direction)
+    {
+        dashDirection = direction;
     }
     #endregion
 

@@ -10,7 +10,7 @@ public class PlayerStatsManager : MonoBehaviour
     [Header("Stat Bars")]
     [SerializeField] private StatsBar jumpForceBar;
     [SerializeField] private StatsBar movementSpeedBar;
-    [SerializeField] private StatsBar dashForceBar; // Optional: for dash ability
+    [SerializeField] private StatsBar skillForceBar; // Optional: for skill ability
 
     [Header("UI Elements")]
     [SerializeField] private TMPro.TextMeshProUGUI remainingPointsText; // Change this line
@@ -21,7 +21,7 @@ public class PlayerStatsManager : MonoBehaviour
     // Starting values for each stat
     private int startingJumpPoints = 1;    // Changed from 2 to 1
     private int startingSpeedPoints = 1;   // Changed from 3 to 1  
-    private int startingDashPoints = 1;    // Changed from 2 to 1
+    private int startingSkillPoints = 1;    // Changed from 2 to 1
 
     private void Start()
     {
@@ -30,7 +30,7 @@ public class PlayerStatsManager : MonoBehaviour
         // Check all stat bars
         Debug.Log($"jumpForceBar is null: {jumpForceBar == null}");
         Debug.Log($"movementSpeedBar is null: {movementSpeedBar == null}");
-        Debug.Log($"dashForceBar is null: {dashForceBar == null}");
+        Debug.Log($"skillForceBar is null: {skillForceBar == null}");
 
         if (player == null)
         {
@@ -38,18 +38,18 @@ public class PlayerStatsManager : MonoBehaviour
             Debug.Log($"Player found: {player != null}");
         }
 
-        // Only require jump and speed bars (dash is optional)
-        if (jumpForceBar != null && movementSpeedBar != null)
-        {
-            InitializeStats();
-            UpdatePlayerStats();
-            UpdateUI();
-            Debug.Log("Stats initialized successfully!");
-        }
-        else
-        {
-            Debug.LogError("Jump or Speed stat bar is not assigned in Inspector!");
-        }
+        // Only require jump and speed bars (skill is optional)
+        // if (jumpForceBar != null && movementSpeedBar != null)
+        // {
+        //     InitializeStats();
+        //     UpdatePlayerStats();
+        //     UpdateUI();
+        //     Debug.Log("Stats initialized successfully!");
+        // }
+        // else
+        // {
+        //     Debug.LogError("Jump or Speed stat bar is not assigned in Inspector!");
+        // }
     }
 
     private void InitializeStats()
@@ -66,9 +66,9 @@ public class PlayerStatsManager : MonoBehaviour
         Debug.Log($"Jump bar current value: {jumpForceBar.GetCurrentValue()}");
         Debug.Log($"Speed bar current value: {movementSpeedBar.GetCurrentValue()}");
 
-        // Only set dash if it exists
-        if (dashForceBar != null)
-            dashForceBar.SetCurrentValue(startingDashPoints);
+        // Only set skill if it exists
+        if (skillForceBar != null)
+            skillForceBar.SetCurrentValue(startingSkillPoints);
 
         // Calculate used points (only count points above minimum)
         RecalculateUsedPoints();
@@ -115,9 +115,9 @@ public class PlayerStatsManager : MonoBehaviour
         // Only count points above the minimum (1) for each stat
         int jumpExtraPoints = jumpForceBar.GetCurrentValue() - 1;
         int speedExtraPoints = movementSpeedBar.GetCurrentValue() - 1;
-        int dashExtraPoints = dashForceBar != null ? dashForceBar.GetCurrentValue() - 1 : 0;
+        int skillExtraPoints = skillForceBar != null ? skillForceBar.GetCurrentValue() - 1 : 0;
 
-        currentUsedPoints = jumpExtraPoints + speedExtraPoints + dashExtraPoints;
+        currentUsedPoints = jumpExtraPoints + speedExtraPoints + skillExtraPoints;
     }
     private void UpdatePlayerStats()
     {

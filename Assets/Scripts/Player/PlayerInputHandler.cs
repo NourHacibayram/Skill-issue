@@ -8,7 +8,7 @@ public class PlayerInputHandler : MonoBehaviour
     public Vector2 MoveInput { get; private set; }
     public bool JumpPressed { get; private set; }
     public bool JumpHeld { get; private set; }
-    public bool DashPressed { get; private set; }
+    public bool SkillPressed { get; private set; }
 
     private void Awake()
     {
@@ -51,10 +51,10 @@ public class PlayerInputHandler : MonoBehaviour
             JumpPressed = false;
         }
         
-        // Reset DashPressed after one frame
-        if (DashPressed)
+        // Reset SkillPressed after one frame
+        if (SkillPressed)
         {
-            DashPressed = false;
+            SkillPressed = false;
         }
     }
 
@@ -90,14 +90,14 @@ public class PlayerInputHandler : MonoBehaviour
             Debug.LogError("Jump action not found in PlayerControls!");
         }
 
-        if (actions.Dash != null)
+        if (actions.Skill != null)
         {
-            actions.Dash.performed += OnDashPerformed;
-            actions.Dash.canceled += OnDashCanceled;
+            actions.Skill.performed += OnSkillPerformed;
+            actions.Skill.canceled += OnSkillCanceled;
         }
         else
         {
-            Debug.LogError("Dash action not found in PlayerControls!");
+            Debug.LogError("Skill action not found in PlayerControls!");
         }
     }
 
@@ -122,10 +122,10 @@ public class PlayerInputHandler : MonoBehaviour
             actions.Jump.canceled -= OnJumpCanceled;
         }
 
-        if (actions.Dash != null)
+        if (actions.Skill != null)
         {
-            actions.Dash.performed -= OnDashPerformed;
-            actions.Dash.canceled -= OnDashCanceled;
+            actions.Skill.performed -= OnSkillPerformed;
+            actions.Skill.canceled -= OnSkillCanceled;
         }
 
         actions.Disable();
@@ -137,7 +137,7 @@ public class PlayerInputHandler : MonoBehaviour
         MoveInput = Vector2.zero;
         JumpPressed = false;
         JumpHeld = false;
-        DashPressed = false;
+        SkillPressed = false;
         
         Debug.Log("Input handler reset - all inputs cleared");
     }
@@ -156,6 +156,6 @@ public class PlayerInputHandler : MonoBehaviour
         JumpHeld = false;
     }
 
-    private void OnDashPerformed(InputAction.CallbackContext context) => DashPressed = true;
-    private void OnDashCanceled(InputAction.CallbackContext context) => DashPressed = false;
+    private void OnSkillPerformed(InputAction.CallbackContext context) => SkillPressed = true;
+    private void OnSkillCanceled(InputAction.CallbackContext context) => SkillPressed = false;
 }
