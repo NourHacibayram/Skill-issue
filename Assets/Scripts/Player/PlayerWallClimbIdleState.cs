@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerWallClimbIdleState : PlayerState
 {
     private float originalGravityScale; // Store the original gravity scale
+    private float transitionCooldown; // Timer to prevent rapid state switching
     
     public PlayerWallClimbIdleState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
     {
@@ -23,6 +24,9 @@ public class PlayerWallClimbIdleState : PlayerState
         // Temporarily disable gravity while wall climbing idle
         rb.gravityScale = 0f;
         
+        // Set a small cooldown to prevent immediate state switching
+        transitionCooldown = 0.05f; // Reduced for better responsiveness
+        
         Debug.Log("Entered Wall Climb Idle State - Hanging on wall");
     }
 
@@ -39,6 +43,10 @@ public class PlayerWallClimbIdleState : PlayerState
     public override void Update()
     {
         base.Update();
+        
+        // Decrease transition cooldown
+        if (transitionCooldown > 0)
+            transitionCooldown -= Time.deltaTime;
         
         // Exit if jump is pressed (wall jump)
         if (player.GetJumpPressed())
@@ -75,14 +83,18 @@ public class PlayerWallClimbIdleState : PlayerState
             return;
         }
         
-        // Check for climbing movement input to transition to active climbing
-        Vector2 climbInput = player.inputHandler.WallClimbMovementInput;
-        
-        if (Mathf.Abs(climbInput.y) > 0.1f) // Small deadzone for input
+        // Only check for climbing movement input after cooldown period to prevent rapid switching
+        if (transitionCooldown <= 0)
         {
-            // Player is giving vertical input - transition to active wall climbing
-            stateMachine.ChangeState(player.wallClimbState);
-            return;
+            Vector2 climbInput = player.inputHandler.WallClimbMovementInput;
+            
+            // Use a very low threshold to be responsive but still prevent noise
+            if (Mathf.Abs(climbInput.y) > 0.1f) // Back to original threshold but with better hysteresis in WallClimbState
+            {
+                // Player is giving vertical input - transition to active wall climbing
+                stateMachine.ChangeState(player.wallClimbState);
+                return;
+            }
         }
         
         // Stay attached to wall with no movement (hanging/idle on wall)

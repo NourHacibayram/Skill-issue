@@ -43,6 +43,8 @@ public class PlayerAirState : PlayerState
             stateMachine.ChangeState(player.wallClimbIdleState);
             return;
         }
+        
+        // Check for ledge grab when falling and near a ledg
 
         if (player.IsWallDetected() && !player.GetWallClimbPressed())
             stateMachine.ChangeState(player.wallSlideState);

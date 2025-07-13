@@ -29,6 +29,20 @@ public class Player : MonoBehaviour
     public float dashDuration;
     public float dashDirection { get; private set; }
 
+    [Header("Wall Climb")]
+    
+    [HideInInspector]
+    public bool ledgeDetected;
+    [SerializeField] private Vector2 wallClimbOffset1;
+    [SerializeField] private Vector2 wallClimbOffset2;
+
+    private Vector2 climbBegunPosition;
+    private Vector2 climbOverPosition;
+    private bool canGrabLedge = true;
+    private bool canClimb;
+    
+    
+
     public SkillManager skill { get; private set; }
 
 
@@ -44,6 +58,7 @@ public class Player : MonoBehaviour
     public PlayerWallJumpState wallJumpState { get; private set; }
     public PlayerWallClimbState wallClimbState { get; private set; }
     public PlayerWallClimbIdleState wallClimbIdleState { get; private set; }
+    public PlayerDeadState deadState { get; private set; }
     #endregion
 
     #region Audio
@@ -51,6 +66,7 @@ public class Player : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip jumpSound;
     [SerializeField] private AudioClip fallSound;
+    [SerializeField] private AudioClip deathSound;
     #endregion
 
     public bool isBusy { get; private set; } = false;
@@ -81,6 +97,7 @@ public class Player : MonoBehaviour
         wallJumpState = new PlayerWallJumpState(this, stateMachine, "Jump");
         wallClimbState = new PlayerWallClimbState(this, stateMachine, "WallClimb");
         wallClimbIdleState = new PlayerWallClimbIdleState(this, stateMachine, "WallClimbIdle");
+        deadState = new PlayerDeadState(this, stateMachine, "Dead");
     }
 
     public virtual void Start()
@@ -105,6 +122,8 @@ public class Player : MonoBehaviour
         wasGrounded = isGrounded();
 
         // Safety check for stuck states
+
+        CheckForLedge();
     }
 
     #region Play Audio
@@ -122,22 +141,12 @@ public class Player : MonoBehaviour
             audioSource.PlayOneShot(jumpSound);
         }
     }
-    #endregion
-
-    #region Skills
-    public bool HasSkill(SkillType skillType)
+    
+    public void PlayDeathSound()
     {
-        // Use the static PlayerSkills class instead
-        switch (skillType)
+        if (deathSound != null && audioSource != null)
         {
-            case SkillType.Dash:
-                return PlayerSkills.HasDash();
-            case SkillType.WallClimb:
-                return PlayerSkills.HasWallClimb();
-            case SkillType.DoubleJump:
-                return PlayerSkills.HasDoubleJump();
-            default:
-                return false;
+            audioSource.PlayOneShot(deathSound);
         }
     }
     #endregion
@@ -166,6 +175,26 @@ public class Player : MonoBehaviour
 
         return false;
     }
+
+    private void CheckForLedge()
+    {
+        if (ledgeDetected && canGrabLedge)
+        {
+            canGrabLedge = false;
+
+            Vector2 ledgePosition = GetComponentInChildren<LedgeDetection>().transform.position;
+
+            climbBegunPosition = ledgePosition + wallClimbOffset1;
+            climbOverPosition = ledgePosition + wallClimbOffset2;
+
+            canClimb = true;
+
+            if (canClimb)
+                transform.position = climbBegunPosition;
+        }
+    }
+
+
     public void OnDrawGizmos()
     {
         Gizmos.DrawLine(wallCheck.position, wallCheck.position + Vector3.right * facingDirection * wallCheckDistance);
@@ -225,7 +254,7 @@ public class Player : MonoBehaviour
             Debug.LogWarning("InputHandler is null in Player.GetWallClimbHeld()");
             return false;
         }
-
+        
         // Use the proper held input from the Input System
         return inputHandler.WallClimbHeld;
     }
@@ -255,7 +284,7 @@ public class Player : MonoBehaviour
         rb.linearVelocity = new Vector2(_xVelocity, _yVelocity);
         FlipController(_xVelocity);
     }
-
+    
     public void SetDashDirection(float direction)
     {
         dashDirection = direction;

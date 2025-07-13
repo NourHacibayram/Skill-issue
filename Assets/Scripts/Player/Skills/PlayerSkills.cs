@@ -2,8 +2,8 @@ using UnityEngine;
 
 public static class PlayerSkills
 {
-    public static SkillType selectedSkill = SkillType.Dash;
-    public static bool hasSelectedSkill = false;
+    public static SkillType selectedSkill = SkillType.WallClimb; // Changed to WallClimb for testing
+    public static bool hasSelectedSkill = true; // Changed to true for testing
     
     public static bool HasDash()
     {
