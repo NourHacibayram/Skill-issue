@@ -46,10 +46,18 @@ public class Player : MonoBehaviour
     public PlayerWallClimbIdleState wallClimbIdleState { get; private set; }
     #endregion
 
+    #region Audio
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip jumpSound;
+    [SerializeField] private AudioClip fallSound;
+    #endregion
 
     public bool isBusy { get; private set; } = false;
     public float facingDirection { get; set; } = 1;
     public bool facingRight = true;
+
+    private bool wasGrounded = true; // Track previous grounded state
 
 
     public virtual void Awake()
@@ -84,14 +92,38 @@ public class Player : MonoBehaviour
 
     public virtual void Update()
     {
-
         stateMachine.currentState.Update();
         anim.SetFloat("yVelocity", rb.linearVelocity.y);
-    
-    // Safety check for stuck states
-   
+
+        // Check for landing (was in air, now grounded)
+        if (!wasGrounded && isGrounded())
+        {
+            PlayFallSound();
+        }
+
+        // Update previous grounded state
+        wasGrounded = isGrounded();
+
+        // Safety check for stuck states
     }
-    
+
+    #region Play Audio
+    private void PlayFallSound()
+    {
+        if (fallSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(fallSound);
+        }
+    }
+    public void PlayJumpSound()
+    {
+        if (jumpSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(jumpSound);
+        }
+    }
+    #endregion
+
 
     #region Collision
 
@@ -105,13 +137,16 @@ public class Player : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.Raycast(wallCheck.position, Vector2.right * facingDirection, wallCheckDistance, whatIsGround);
 
-        // Optional debug to help troubleshoot
         if (hit.collider != null)
         {
-            Debug.Log($"Wall detected: {hit.collider.name} at distance {hit.distance}");
+            // Skip if it's a one-way platform
+            if (hit.collider.CompareTag("OneWay") || hit.collider.GetComponent<PlatformEffector2D>() != null)
+                return false;
+
+            return true;
         }
 
-        return hit.collider != null;
+        return false;
     }
     public void OnDrawGizmos()
     {
@@ -194,14 +229,7 @@ public class Player : MonoBehaviour
     #region Velocity
     public void ZeroVelocity()
     {
-        if (rb != null)
-        {
-            rb.linearVelocity = new Vector2(0, 0);
-        }
-        else
-        {
-            Debug.LogWarning("Cannot zero velocity: Rigidbody2D is null. Component may not be initialized yet.");
-        }
+        rb.linearVelocity = new Vector2(0, 0);
     }
 
     public void SetVelocity(float _xVelocity, float _yVelocity)

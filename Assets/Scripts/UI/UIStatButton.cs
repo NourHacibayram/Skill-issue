@@ -10,6 +10,11 @@ public class UIStatButton : MonoBehaviour
 
     [Header("Button References")]
     [SerializeField] private Button button;
+    
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip buttonClickSound;
+    [SerializeField] private float soundVolume = 0.7f;
 
     private void Start()
     {
@@ -18,6 +23,10 @@ public class UIStatButton : MonoBehaviour
 
         if (statsManager == null)
             statsManager = FindFirstObjectByType<PlayerStatsManager>();
+            
+        // Auto-find AudioSource if not assigned
+        if (audioSource == null)
+            audioSource = GetComponent<AudioSource>();
 
         // Force enable for Speed Add Button (temporary test)
         if (gameObject.name.Contains("Speed") && isAddButton)
@@ -30,11 +39,12 @@ public class UIStatButton : MonoBehaviour
         InvokeRepeating(nameof(UpdateButtonState), 0f, 0.1f);
     }
 
-
-
     private void OnButtonClick()
     {
         if (statsManager == null || targetStatsBar == null) return;
+
+        // Play button click sound
+        PlayButtonSound();
 
         if (isAddButton)
         {
@@ -43,6 +53,14 @@ public class UIStatButton : MonoBehaviour
         else
         {
             statsManager.RemovePointFromStat(targetStatsBar);
+        }
+    }
+    
+    private void PlayButtonSound()
+    {
+        if (buttonClickSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(buttonClickSound, soundVolume);
         }
     }
 

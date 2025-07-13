@@ -6,7 +6,7 @@ public class PlayerJumpState : PlayerState
 {
     private int amountOfJumpsLeft;
 
-    public PlayerJumpState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName) 
+    public PlayerJumpState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName)
         : base(_player, _stateMachine, _animBoolName)
     {
     }
@@ -25,6 +25,7 @@ public class PlayerJumpState : PlayerState
         {
             Debug.Log("Jumping! Jumps left: " + amountOfJumpsLeft);
             player.rb.linearVelocity = new Vector2(player.rb.linearVelocity.x, player.jumpForce);
+            player.PlayJumpSound(); // Add this line
             UseJump(); // Decrease jump count
         }
     }
@@ -83,6 +84,7 @@ public class PlayerJumpState : PlayerState
     {
         return amountOfJumpsLeft > 0;
     }
+
 
     public void UseJump()
     {

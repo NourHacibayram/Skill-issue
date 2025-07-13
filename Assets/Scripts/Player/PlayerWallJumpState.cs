@@ -14,6 +14,7 @@ public class PlayerWallJumpState : PlayerState
 
         stateTimer = .4f;
         player.SetVelocity(5 * -player.facingDirection, player.jumpForce);
+        player.PlayJumpSound(); // Add this line
     }
 
     public override void Exit()
@@ -25,10 +26,10 @@ public class PlayerWallJumpState : PlayerState
     {
         base.Update();
 
-        if(stateTimer < 0)
+        if (stateTimer < 0)
             stateMachine.ChangeState(player.airState);
 
-        if(player.isGrounded())
+        if (player.isGrounded())
             stateMachine.ChangeState(player.idleState);
     }
 }

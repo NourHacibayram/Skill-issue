@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerDoubleJumpState : PlayerState
 {
-    public PlayerDoubleJumpState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName) 
+    public PlayerDoubleJumpState(Player _player, PlayerStateMachine _stateMachine, string _animBoolName)
         : base(_player, _stateMachine, _animBoolName)
     {
     }
@@ -16,6 +16,7 @@ public class PlayerDoubleJumpState : PlayerState
         if (player.jumpState.CanDoubleJump())
         {
             player.rb.linearVelocity = new Vector2(player.rb.linearVelocity.x, player.doubleJumpForce);
+            player.PlayJumpSound(); // Add this line
             player.jumpState.UseJump(); // Reduce jump count
         }
     }
@@ -40,7 +41,7 @@ public class PlayerDoubleJumpState : PlayerState
 
     public void EndDoubleJumpAnimation()
     {
-        if (stateMachine.currentState == this) 
+        if (stateMachine.currentState == this)
         {
             player.anim.SetBool("Jump", false);
             player.anim.Play("PlayerIdle", 0); 
