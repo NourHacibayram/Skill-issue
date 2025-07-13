@@ -47,13 +47,6 @@ public class PlayerWallClimbIdleState : PlayerState
             return;
         }
         
-        // Exit if player moves away from wall (releases movement towards wall)
-        if (xInput != 0 && player.facingDirection != xInput)
-        {
-            stateMachine.ChangeState(player.airState);
-            return;
-        }
-        
         // Exit if player is grounded
         if (player.isGrounded())
         {
@@ -72,6 +65,13 @@ public class PlayerWallClimbIdleState : PlayerState
         if (!player.GetWallClimbHeld())
         {
             stateMachine.ChangeState(player.wallSlideState);
+            return;
+        }
+        
+        // Exit if player moves away from wall (releases movement towards wall)
+        if (xInput != 0 && player.facingDirection != xInput)
+        {
+            stateMachine.ChangeState(player.airState);
             return;
         }
         

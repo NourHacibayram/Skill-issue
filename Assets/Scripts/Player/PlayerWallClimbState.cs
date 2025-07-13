@@ -38,20 +38,6 @@ public class PlayerWallClimbState : PlayerState
             return;
         }
         
-        // Exit if player moves away from wall (releases movement towards wall)
-        if (xInput != 0 && player.facingDirection != xInput)
-        {
-            stateMachine.ChangeState(player.airState);
-            return;
-        }
-        
-        // Exit if player is not pressing towards the wall anymore
-        if (xInput == 0)
-        {
-            stateMachine.ChangeState(player.wallSlideState);
-            return;
-        }
-        
         // Exit if player is grounded
         if (player.isGrounded())
         {
@@ -73,19 +59,26 @@ public class PlayerWallClimbState : PlayerState
             return;
         }
         
+        // Exit if player moves away from wall (releases movement towards wall)
+        if (xInput != 0 && player.facingDirection != xInput)
+        {
+            stateMachine.ChangeState(player.airState);
+            return;
+        }
+        
         // Climbing movement - use the dedicated ClimbMovement input for vertical movement
         Vector2 climbInput = player.inputHandler.WallClimbMovementInput;
         float verticalInput = climbInput.y;
         
-        if (verticalInput > 0) // Climbing up
+        if (verticalInput > 0.1f) // Climbing up (with deadzone)
         {
             rb.linearVelocity = new Vector2(0, climbSpeed);
         }
-        else if (verticalInput < 0) // Climbing down
+        else if (verticalInput < -0.1f) // Climbing down (with deadzone)
         {
             rb.linearVelocity = new Vector2(0, -climbSpeed * 0.5f); // Slower descent
         }
-        else // No vertical input - transition to idle climbing state
+        else // No significant vertical input - transition to idle climbing state
         {
             stateMachine.ChangeState(player.wallClimbIdleState);
             return;
