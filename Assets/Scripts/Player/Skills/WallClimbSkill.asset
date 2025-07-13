@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Wall Climb
   description: Climb up walls and reach new heights
-  skillIcon: {fileID: 0}
+  skillIcon: {fileID: 3948324395833988871, guid: 1abcf753d9f2add45b131c6e79e2e0c2, type: 3}
   skillType: 1
   cooldown: 0
   isUnlocked: 1

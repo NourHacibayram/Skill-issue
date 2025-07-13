@@ -26,13 +26,17 @@ public class SkillSelectionManager : MonoBehaviour
 
     private void Awake()
     {
+        // Check if instance already exists
         if (instance == null)
         {
             instance = this;
+            Debug.Log("SkillSelectionManager instance created");
         }
-        else
+        else if (instance != this)
         {
+            Debug.Log("Duplicate SkillSelectionManager found - destroying this one");
             Destroy(gameObject);
+            return;
         }
     }
 
@@ -58,6 +62,17 @@ public class SkillSelectionManager : MonoBehaviour
 
     private void CreateSkillButtons()
     {
+        // CLEAR EXISTING BUTTONS FIRST
+        foreach (Transform child in skillsContainer)
+        {
+            if (child != null)
+            {
+                Debug.Log($"Destroying existing button: {child.name}");
+                DestroyImmediate(child.gameObject);
+            }
+        }
+
+        // NOW CREATE NEW BUTTONS
         skillButtons = new SkillSelectionButton[availableSkills.Length];
 
         for (int i = 0; i < availableSkills.Length; i++)
@@ -67,7 +82,11 @@ public class SkillSelectionManager : MonoBehaviour
 
             skillButton.Setup(availableSkills[i], this);
             skillButtons[i] = skillButton;
+
+            Debug.Log($"Created skill button {i}: {availableSkills[i].skillName}");
         }
+
+        Debug.Log($"Total skill buttons created: {skillButtons.Length}");
     }
 
     public void SelectSkill(SkillData skill)

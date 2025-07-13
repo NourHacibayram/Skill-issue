@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Dash
   description: Dash forward quickly
-  skillIcon: {fileID: 0}
+  skillIcon: {fileID: -7848039375673857549, guid: 3df8362b3e7e096498e8e958bc158ba2, type: 3}
   skillType: 0
   cooldown: 2
   isUnlocked: 1

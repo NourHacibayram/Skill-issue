@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skillName: Double Jump
   description: Jump again while in mid-air
-  skillIcon: {fileID: 0}
+  skillIcon: {fileID: -116059596369708853, guid: b1cdf358f94bd45479ae71a300366589, type: 3}
   skillType: 2
   cooldown: 0
   isUnlocked: 1
