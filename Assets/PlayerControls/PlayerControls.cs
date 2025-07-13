@@ -101,6 +101,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
+                    ""name"": ""ClimbMovement"",
+                    ""type"": ""Value"",
+                    ""id"": ""5082159e-1957-4346-8988-8836e97dcee6"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
                     ""name"": ""Jump"",
                     ""type"": ""Button"",
                     ""id"": ""db6f33c7-44e5-4e4d-8bf4-007fdd270355"",
@@ -113,6 +122,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""name"": ""Skill"",
                     ""type"": ""Button"",
                     ""id"": ""87e29436-0ab5-4dc8-8eb9-8b57adcbae8a"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""WallClimb"",
+                    ""type"": ""Button"",
+                    ""id"": ""caafa31b-a29b-4e65-9588-8d7fe1e0b1de"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -154,6 +172,39 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""26f575a2-99ca-470d-b57e-b55324be7647"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ClimbMovement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""Up"",
+                    ""id"": ""6953ce16-a0a8-42bb-beb7-4251c0943f49"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard"",
+                    ""action"": ""ClimbMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Down"",
+                    ""id"": ""02c402b7-9c04-475f-b6af-0ce22ae0a7e4"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard"",
+                    ""action"": ""ClimbMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": """",
                     ""id"": ""beda147e-6cfd-4e77-8d3d-be582273c013"",
                     ""path"": ""<Keyboard>/space"",
@@ -172,6 +223,17 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": "";Keyboard"",
                     ""action"": ""Skill"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dfa0534d-0a4a-49a6-a949-e18a75e206a2"",
+                    ""path"": ""<Keyboard>/k"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""WallClimb"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -200,8 +262,10 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
+        m_Player_ClimbMovement = m_Player.FindAction("ClimbMovement", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_Skill = m_Player.FindAction("Skill", throwIfNotFound: true);
+        m_Player_WallClimb = m_Player.FindAction("WallClimb", throwIfNotFound: true);
     }
 
     ~@PlayerControls()
@@ -283,8 +347,10 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
     private readonly InputAction m_Player_Move;
+    private readonly InputAction m_Player_ClimbMovement;
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_Skill;
+    private readonly InputAction m_Player_WallClimb;
     /// <summary>
     /// Provides access to input actions defined in input action map "Player".
     /// </summary>
@@ -301,6 +367,10 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Move => m_Wrapper.m_Player_Move;
         /// <summary>
+        /// Provides access to the underlying input action "Player/ClimbMovement".
+        /// </summary>
+        public InputAction @ClimbMovement => m_Wrapper.m_Player_ClimbMovement;
+        /// <summary>
         /// Provides access to the underlying input action "Player/Jump".
         /// </summary>
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
@@ -308,6 +378,10 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Player/Skill".
         /// </summary>
         public InputAction @Skill => m_Wrapper.m_Player_Skill;
+        /// <summary>
+        /// Provides access to the underlying input action "Player/WallClimb".
+        /// </summary>
+        public InputAction @WallClimb => m_Wrapper.m_Player_WallClimb;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -337,12 +411,18 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
+            @ClimbMovement.started += instance.OnClimbMovement;
+            @ClimbMovement.performed += instance.OnClimbMovement;
+            @ClimbMovement.canceled += instance.OnClimbMovement;
             @Jump.started += instance.OnJump;
             @Jump.performed += instance.OnJump;
             @Jump.canceled += instance.OnJump;
             @Skill.started += instance.OnSkill;
             @Skill.performed += instance.OnSkill;
             @Skill.canceled += instance.OnSkill;
+            @WallClimb.started += instance.OnWallClimb;
+            @WallClimb.performed += instance.OnWallClimb;
+            @WallClimb.canceled += instance.OnWallClimb;
         }
 
         /// <summary>
@@ -357,12 +437,18 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
+            @ClimbMovement.started -= instance.OnClimbMovement;
+            @ClimbMovement.performed -= instance.OnClimbMovement;
+            @ClimbMovement.canceled -= instance.OnClimbMovement;
             @Jump.started -= instance.OnJump;
             @Jump.performed -= instance.OnJump;
             @Jump.canceled -= instance.OnJump;
             @Skill.started -= instance.OnSkill;
             @Skill.performed -= instance.OnSkill;
             @Skill.canceled -= instance.OnSkill;
+            @WallClimb.started -= instance.OnWallClimb;
+            @WallClimb.performed -= instance.OnWallClimb;
+            @WallClimb.canceled -= instance.OnWallClimb;
         }
 
         /// <summary>
@@ -424,6 +510,13 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMove(InputAction.CallbackContext context);
         /// <summary>
+        /// Method invoked when associated input action "ClimbMovement" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnClimbMovement(InputAction.CallbackContext context);
+        /// <summary>
         /// Method invoked when associated input action "Jump" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
@@ -437,5 +530,12 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSkill(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "WallClimb" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnWallClimb(InputAction.CallbackContext context);
     }
 }

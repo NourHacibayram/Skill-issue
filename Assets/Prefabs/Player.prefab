@@ -173,8 +173,8 @@ MonoBehaviour:
   moveSpeed: 6.5
   jumpForce: 12
   maxJumps: 2
-  doubleJumpForce: 5
-  dashSpeed: 15
+  doubleJumpForce: 15
+  dashSpeed: 20
   dashDuration: 0.2
   facingRight: 1
 --- !u!95 &6468998951490053217

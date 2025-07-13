@@ -22,6 +22,13 @@ public class PlayerWallSlideState : PlayerState
     {
         base.Update();
         
+        // Check for wall climb input
+        if (player.GetWallClimbHeld())
+        {
+            stateMachine.ChangeState(player.wallClimbIdleState);
+            return;
+        }
+        
         if (player.GetJumpPressed())
         {
             stateMachine.ChangeState(player.wallJumpState);

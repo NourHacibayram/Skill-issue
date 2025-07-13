@@ -25,7 +25,7 @@ public class PlayerIdleState : PlayerGroundedState
 
         float xInput = player.GetMoveInput().x;
 
-        if(xInput == player.facingDirection && player.IsWallDetected())
+        if (xInput == player.facingDirection && player.IsWallDetected())
             return;
 
         // Check for dash input
@@ -36,7 +36,7 @@ public class PlayerIdleState : PlayerGroundedState
                 player.SetDashDirection(Mathf.Sign(xInput));
             else
                 player.SetDashDirection(player.facingDirection);
-                
+
             stateMachine.ChangeState(player.dashState);
             return;
         }
@@ -48,6 +48,12 @@ public class PlayerIdleState : PlayerGroundedState
         else
         {
             player.SetVelocity(0, player.rb.linearVelocity.y);
+        }
+        
+        if(player.IsWallDetected() && player.GetWallClimbPressed())
+        {
+            stateMachine.ChangeState(player.wallClimbState);
+            return;
         }
     }
 }

@@ -37,7 +37,14 @@ public class PlayerAirState : PlayerState
             return;
         }
 
-        if(player.IsWallDetected())
+        // Check for wall climb input when facing a wall
+        if (player.GetWallClimbPressed() && player.IsWallDetected())
+        {
+            stateMachine.ChangeState(player.wallClimbIdleState);
+            return;
+        }
+
+        if(player.IsWallDetected() && !player.GetWallClimbPressed())
             stateMachine.ChangeState(player.wallSlideState);
 
         if (player.isGrounded())

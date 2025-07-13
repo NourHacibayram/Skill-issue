@@ -48,7 +48,13 @@ public class PlayerJumpState : PlayerState
 
         player.SetVelocity(player.moveSpeed * player.GetMoveInput().x, player.rb.linearVelocity.y);
         
-        if(player.IsWallDetected())
+        if (player.GetWallClimbPressed() && player.IsWallDetected())
+        {
+            stateMachine.ChangeState(player.wallClimbState);
+            return;
+        }
+
+        if(player.IsWallDetected() && !player.GetWallClimbPressed())
             stateMachine.ChangeState(player.wallSlideState);
 
         if (player.rb.linearVelocity.y < 0 && !player.isGrounded())

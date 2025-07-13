@@ -9,6 +9,9 @@ public class PlayerInputHandler : MonoBehaviour
     public bool JumpPressed { get; private set; }
     public bool JumpHeld { get; private set; }
     public bool SkillPressed { get; private set; }
+    public bool WallClimbPressed { get; private set; }
+    public bool WallClimbHeld { get; private set; }
+    public Vector2 WallClimbMovementInput { get; private set; }
 
     private void Awake()
     {
@@ -56,6 +59,12 @@ public class PlayerInputHandler : MonoBehaviour
         {
             SkillPressed = false;
         }
+        
+        // Reset WallClimbPressed after one frame
+        if (WallClimbPressed)
+        {
+            WallClimbPressed = false;
+        }
     }
 
     private void EnableInputs()
@@ -99,6 +108,26 @@ public class PlayerInputHandler : MonoBehaviour
         {
             Debug.LogError("Skill action not found in PlayerControls!");
         }
+
+        if (actions.WallClimb != null)
+        {
+            actions.WallClimb.performed += OnWallClimbPerformed;
+            actions.WallClimb.canceled += OnWallClimbCanceled;
+        }
+        else
+        {
+            Debug.LogError("WallClimb action not found in PlayerControls!");
+        }
+
+        if (actions.ClimbMovement != null)
+        {
+            actions.ClimbMovement.performed += OnWallClimbMovementPerformed;
+            actions.ClimbMovement.canceled += OnWallClimbMovementCanceled;
+        }
+        else
+        {
+            Debug.LogError("ClimbMovement action not found in PlayerControls!");
+        }
     }
 
     private void DisableInputs()
@@ -128,6 +157,18 @@ public class PlayerInputHandler : MonoBehaviour
             actions.Skill.canceled -= OnSkillCanceled;
         }
 
+        if (actions.WallClimb != null)
+        {
+            actions.WallClimb.performed -= OnWallClimbPerformed;
+            actions.WallClimb.canceled -= OnWallClimbCanceled;
+        }
+
+        if (actions.ClimbMovement != null)
+        {
+            actions.ClimbMovement.performed -= OnWallClimbMovementPerformed;
+            actions.ClimbMovement.canceled -= OnWallClimbMovementCanceled;
+        }
+
         actions.Disable();
     }
 
@@ -138,6 +179,8 @@ public class PlayerInputHandler : MonoBehaviour
         JumpPressed = false;
         JumpHeld = false;
         SkillPressed = false;
+        WallClimbPressed = false;
+        WallClimbMovementInput = Vector2.zero;
         
         Debug.Log("Input handler reset - all inputs cleared");
     }
@@ -158,4 +201,19 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void OnSkillPerformed(InputAction.CallbackContext context) => SkillPressed = true;
     private void OnSkillCanceled(InputAction.CallbackContext context) => SkillPressed = false;
+
+    private void OnWallClimbPerformed(InputAction.CallbackContext context)
+    {
+        WallClimbPressed = true;
+        WallClimbHeld = true;
+    }
+    
+    private void OnWallClimbCanceled(InputAction.CallbackContext context)
+    {
+        WallClimbPressed = false;
+        WallClimbHeld = false;
+    }
+
+    private void OnWallClimbMovementPerformed(InputAction.CallbackContext context) => WallClimbMovementInput = context.ReadValue<Vector2>();
+    private void OnWallClimbMovementCanceled(InputAction.CallbackContext context) => WallClimbMovementInput = Vector2.zero;
 }

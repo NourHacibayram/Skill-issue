@@ -15,6 +15,15 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "ClimbMovement",
+                    "type": "Value",
+                    "id": "5082159e-1957-4346-8988-8836e97dcee6",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
                     "name": "Jump",
                     "type": "Button",
                     "id": "db6f33c7-44e5-4e4d-8bf4-007fdd270355",
@@ -27,6 +36,15 @@
                     "name": "Skill",
                     "type": "Button",
                     "id": "87e29436-0ab5-4dc8-8eb9-8b57adcbae8a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "WallClimb",
+                    "type": "Button",
+                    "id": "caafa31b-a29b-4e65-9588-8d7fe1e0b1de",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -68,6 +86,39 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "2D Vector",
+                    "id": "26f575a2-99ca-470d-b57e-b55324be7647",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ClimbMovement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Up",
+                    "id": "6953ce16-a0a8-42bb-beb7-4251c0943f49",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard",
+                    "action": "ClimbMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Down",
+                    "id": "02c402b7-9c04-475f-b6af-0ce22ae0a7e4",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard",
+                    "action": "ClimbMovement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
                     "id": "beda147e-6cfd-4e77-8d3d-be582273c013",
                     "path": "<Keyboard>/space",
@@ -86,6 +137,17 @@
                     "processors": "",
                     "groups": ";Keyboard",
                     "action": "Skill",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dfa0534d-0a4a-49a6-a949-e18a75e206a2",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "WallClimb",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

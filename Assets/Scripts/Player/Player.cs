@@ -41,8 +41,9 @@ public class Player : MonoBehaviour
     public PlayerDashState dashState { get; private set; }
     public PlayerDoubleJumpState doubleJumpState { get; private set; }
     public PlayerWallSlideState wallSlideState { get; set; }
-    public PlayerWallJumpState wallJumpState { get; private set; }  
-
+    public PlayerWallJumpState wallJumpState { get; private set; }
+    public PlayerWallClimbState wallClimbState { get; private set; }
+    public PlayerWallClimbIdleState wallClimbIdleState { get; private set; }
     #endregion
 
 
@@ -70,6 +71,8 @@ public class Player : MonoBehaviour
         doubleJumpState = new PlayerDoubleJumpState(this, stateMachine, "Jump");
         wallSlideState = new PlayerWallSlideState(this, stateMachine, "WallSlide");
         wallJumpState = new PlayerWallJumpState(this, stateMachine, "Jump");
+        wallClimbState = new PlayerWallClimbState(this, stateMachine, "WallClimb");
+        wallClimbIdleState = new PlayerWallClimbIdleState(this, stateMachine, "WallClimbIdle");
     }
 
     public virtual void Start()
@@ -148,6 +151,30 @@ public class Player : MonoBehaviour
             return false;
         }
         return inputHandler.SkillPressed;
+    }
+
+    public bool GetWallClimbPressed()
+    {
+        // Add null check to prevent NullReferenceException
+        if (inputHandler == null)
+        {
+            Debug.LogWarning("InputHandler is null in Player.GetWallClimbPressed()");
+            return false;
+        }
+        return inputHandler.WallClimbPressed;
+    }
+
+    public bool GetWallClimbHeld()
+    {
+        // Add null check to prevent NullReferenceException
+        if (inputHandler == null)
+        {
+            Debug.LogWarning("InputHandler is null in Player.GetWallClimbHeld()");
+            return false;
+        }
+        
+        // Use the proper held input from the Input System
+        return inputHandler.WallClimbHeld;
     }
     #endregion
 
